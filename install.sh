@@ -5,3 +5,10 @@
 sudo apt install -y vim-gnome
 
 
+mv ~/.bashrc ~/.bashrc.bak
+cp bashrc ~/.bashrc
+
+mv ~/.vimrc ~/.vimrc.bak
+cp vimrc ~/.vimrc
+
+
