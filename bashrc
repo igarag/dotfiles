@@ -106,19 +106,23 @@ fi
 # some more ls aliases
 alias ll='ls -la'
 alias la='ls -A'
-alias l='ls -l'
+alias l='ls -lh'
 alias dd='dd status=progress'
 
+# Editor
 alias ty='typora'
+
+### Docker
 alias dps='docker ps'
 alias dim='docker images'
 alias dex='docker exec -it'
 alias dc='docker-compose'
-alias ia='cd /home/nachoaz/Dropbox/HOME/iA_Writter/Linux'
-alias tfm='cd /home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz'
 
+### Navigate
 alias r='ranger'
 alias n='nautilus .'
+alias ia='cd /home/nachoaz/Dropbox/HOME/iA_Writter/Linux'
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -187,26 +191,3 @@ if [ ! "${bits}" == "" ]; then
 }
 
 
-
-# Anexos
-export PATH="${PATH}:${HOME}/.local/bin/"
-# [TFM] - Export to turtlebot
-export TURTLEBOT3_MODEL="burger"
-
-source /opt/jderobot/share/jderobot/gazebo/gazebo-assets-setup.sh
-source /opt/jderobot/share/jderobot/gazebo/gazebo-setup.sh
-source /opt/ros/melodic/setup.bash
-source /opt/jderobot/setup.bash
-
-
-## GYM-GAZEBO ###########################################
-
-
-source /home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
-export GYM_GAZEBO_WORLD_MAZE=/home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/maze.world
-export GYM_GAZEBO_WORLD_CIRCUIT=/home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/circuit.world
-export GYM_GAZEBO_WORLD_CIRCUIT2=/home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/circuit2.world
-export GYM_GAZEBO_WORLD_CIRCUIT2C=/home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/circuit2c.world
-export GYM_GAZEBO_WORLD_ROUND=/home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/round.world
-export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/../assets/models
-export GYM_GAZEBO_WORLD_CIRCUIT2C=/home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/circuit2c.world
