@@ -11,4 +11,9 @@ cp bashrc ~/.bashrc
 mv ~/.vimrc ~/.vimrc.bak
 cp vimrc ~/.vimrc
 
+## Install virtualenvs
+
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+sudo add-apt-repository ppa:linuxuprising/apps
+
 
