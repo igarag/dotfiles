@@ -20,6 +20,7 @@ cp vimrc ~/.vimrc
 if [ -d "$RANGER_PATH" ];
 then
     sudo apt install ranger
+    sudo apt install feh
 fi
 cp rc.conf $RANGER_PATH/
 
