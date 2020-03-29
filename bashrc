@@ -111,6 +111,8 @@ alias dd='dd status=progress'
 
 # Editor
 alias ty='typora'
+alias jn='jupyter-notebook'
+alias jl='jupyter lab'
 
 ### Docker
 alias dps='docker ps'
