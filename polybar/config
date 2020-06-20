@@ -58,7 +58,7 @@ font-3 = Hack Nerd Font Mono:pixelsize=15;2
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = powermenu pulseaudio xkeyboard memory cpu wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
@@ -247,7 +247,8 @@ interface = enp61s0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = 直
+#format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
