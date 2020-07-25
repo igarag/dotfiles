@@ -111,6 +111,7 @@ alias dd='dd status=progress'
 
 # Editor
 alias ty='typora'
+alias vim='nvim'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
@@ -123,8 +124,10 @@ alias dc='docker-compose'
 ### Navigate
 alias r='ranger'
 alias n='nautilus .'
-alias ia='cd /home/nachoaz/Dropbox/HOME/iA_Writter/Linux'
+alias code='codium'
 
+
+alias sortcut='vim ~/.config/sxhkd/sxhkdrc'                                                       alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
 
 alias disk='lsblk'
 
