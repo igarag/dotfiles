@@ -14,6 +14,10 @@ sudo apt install -y neovim
 mv ~/.bashrc ~/.bashrc.bak
 cp bashrc ~/.bashrc
 
+### zsh
+mv ~/.zshrc ~/.zshrc.bak
+cp zshrc ~/.zshrc
+
 ### vimrc
 mv ~/.vimrc ~/.vimrc.bak
 cp vimrc ~/.vimrc
