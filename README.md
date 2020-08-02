@@ -17,14 +17,11 @@ This repository presents configuration about the following programs:
 
   
 
-### TODO
-
-- [i3](https://i3wm.org/) (window tiling manager) in Manjaro-i3 community version.
-
-
+### Tiling window manager resources
 
 Other libraries for customization:
 
 - [pywal](https://github.com/dylanaraps/pywal/wiki/Installation)
 - bspwm
 - [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
+- Multimonitor: [mons](https://github.com/Ventto/mons)
