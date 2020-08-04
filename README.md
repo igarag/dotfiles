@@ -15,6 +15,8 @@ This repository presents configuration about the following programs:
 
 - [Suckless](https://suckless.org/)
 
+- Devhints: alias to return information about a library (hints) using [rich](https://github.com/willmcgugan/rich) Python library
+
   
 
 ### Tiling window manager resources
