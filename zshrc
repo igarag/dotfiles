@@ -114,19 +114,28 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 ### ALIAS ###
-alias ll='ls -la'
+alias ll='lc -l'
+alias lll='lc -la'
 alias la='ls -A'
-alias l='ls -lh'
+alias l='ls -lhg'
 alias dd='dd status=progress'
+alias lc='colorls'
 
-# Editor
+### Git
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gco='git checkout'
+
+### Editor
 alias ty='typora'
+alias tyr='typora README.md'
 alias vim='nvim'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
 ### Docker
-alias dps='docker ps'
+alias dps='ctop'
 alias dim='docker images'
 alias dex='docker exec -it'
 alias dc='docker-compose'
@@ -144,3 +153,4 @@ alias sortcut='vim ~/.config/sxhkd/sxhkdrc'
 alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
 
 
+source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
