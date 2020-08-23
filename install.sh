@@ -11,17 +11,8 @@ sudo apt install -y vim-gnome
 sudo apt install -y neovim
 
 ### bashrc
-mv ~/.bashrc ~/.bashrc.bak
-cp bashrc ~/.bashrc
-
 ### zsh
-mv ~/.zshrc ~/.zshrc.bak
-cp zshrc ~/.zshrc
-
 ### vimrc
-mv ~/.vimrc ~/.vimrc.bak
-cp vimrc ~/.vimrc
-
 ### nvim
 if [ ! -d "$NEOVIM_PATH"];
 then
