@@ -21,6 +21,8 @@ This repository presents configuration about the following programs:
 
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
+- [Ruby colorls](https://www.omgubuntu.co.uk/2017/07/add-bling-ls-bash-command-colorls).
+
 - [ctop](https://github.com/bcicen/ctop)
 
   
