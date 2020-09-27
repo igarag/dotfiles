@@ -120,11 +120,15 @@ alias la='ls -A'
 alias l='ls -lhg'
 alias dd='dd status=progress'
 alias lc='colorls'
+alias ipconfig='ip -c --brief addr show'
+alias untar='tar -xvf'
+alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
 
 ### Git
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
+alias gpp='git push origin'
 alias gco='git checkout'
 
 ### Editor
@@ -152,5 +156,7 @@ alias tfm='cd /home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo'
 alias sortcut='vim ~/.config/sxhkd/sxhkdrc'
 alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
 
+# Avoid share the terminal history between terminals
+unsetopt share_history
 
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
