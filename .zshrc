@@ -128,7 +128,6 @@ alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | h
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
-alias gpp='git push origin'
 alias gco='git checkout'
 
 ### Editor
