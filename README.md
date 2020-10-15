@@ -41,3 +41,8 @@ Other libraries for customization:
 Plugins:
 
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+## Programs I use
+
+- [Rofi](https://github.com/davatorium/rofi)
+- Flameshot
