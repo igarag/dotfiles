@@ -123,6 +123,7 @@ alias lc='colorls'
 alias ipconfig='ip -c --brief addr show'
 alias untar='tar -xvf'
 alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
+alias whereisthepi='nmap -sn 192.168.0.1-254'
 
 ### Git
 alias gs='git status'
@@ -138,7 +139,7 @@ alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
 ### Docker
-alias dps='ctop'
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}"'
 alias dim='docker images'
 alias dex='docker exec -it'
 alias dc='docker-compose'
