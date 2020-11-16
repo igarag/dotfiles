@@ -42,7 +42,40 @@ Plugins:
 
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
-## Programs I use
+## Programs
 
 - [Rofi](https://github.com/davatorium/rofi)
 - Flameshot
+
+## NeoVim + Python
+
+Create file:
+
+```bash
+~/.config/nvim/init.vim
+```
+
+1. Install vim-plug itself:
+
+   ```bash
+   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   ```
+
+2. Edit `init.vim` and add the configuration for vim-plug. Sample:
+
+   ```bash
+   call plug#begin('~/.local/share/nvim/plugged')
+   Plug 'davidhalter/jedi-vim'
+   call plug#end()
+   ```
+
+## How to use vim-plug
+
+You can execute following command in Nvim comand mode:
+
+- Install plugins：`:PlugInstall`
+- Update plugins：`:PlugUpdate`
+- Remove plugins：`:PlugClean` (First, comment the plugin install command in `init.vim`. Open Nvim and use `:PlugClean` to uninstall plugins)
+- Check the plugin status：`:PlugStatus`
+- Upgrade vim-plug itself：`:PlugUpgrade`
