@@ -46,6 +46,33 @@ Plugins:
 
 - [Rofi](https://github.com/davatorium/rofi)
 - Flameshot
+- [LazyGit](https://github.com/jesseduffield/lazygit)
+- [BatCat](https://github.com/sharkdp/bat)
+- [colorls](https://github.com/athityakumar/colorls#installation)
+
+## Rofi
+
+Install Rofi vía apt:
+
+```bash
+sudo apt install rofi
+```
+
+Add the following command to your custom shortcuts.
+
+- Run programs:
+
+  ```bash
+  rofi -show drun -show-icons
+  ```
+
+- Show windows
+
+    ```bash
+    rofi -show window -show-icons
+    ```
+
+Copy the `photon-orange.rasi` theme to `/usr/share/rofi/themes`.
 
 ## NeoVim + Python
 
@@ -79,3 +106,4 @@ You can execute following command in Nvim comand mode:
 - Remove plugins：`:PlugClean` (First, comment the plugin install command in `init.vim`. Open Nvim and use `:PlugClean` to uninstall plugins)
 - Check the plugin status：`:PlugStatus`
 - Upgrade vim-plug itself：`:PlugUpgrade`
+- Reload config file: `:so %`
