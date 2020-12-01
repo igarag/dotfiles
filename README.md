@@ -21,8 +21,6 @@ This repository presents configuration about the following programs:
 
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
-- [Ruby colorls](https://www.omgubuntu.co.uk/2017/07/add-bling-ls-bash-command-colorls).
-
 - [ctop](https://github.com/bcicen/ctop)
 
   
@@ -41,6 +39,15 @@ Other libraries for customization:
 Plugins:
 
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+- zsh-autosuggestions
+
+  ```bash
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+  ```
+
+  
 
 ## Programs
 
@@ -76,6 +83,21 @@ Copy the `photon-orange.rasi` theme to `/usr/share/rofi/themes`.
 
 ## NeoVim + Python
 
+### Install NeoVim
+
+Download de [appimage](https://github.com/neovim/neovim/releases) and move it into:
+
+```bash
+sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
+chmod +x /usr/local/bin/nvim
+```
+
+Extensions:
+
+- fzf
+- Denite
+- CoC
+
 Create file:
 
 ```bash
@@ -96,6 +118,49 @@ Create file:
    Plug 'davidhalter/jedi-vim'
    call plug#end()
    ```
+
+
+
+### FZF
+
+Install using:
+
+```bash
+sudo apt install fzf
+```
+
+| Command | Use                                                          |
+| ------- | ------------------------------------------------------------ |
+| :BLines | Search patterns in one file. Return the lines contained in the pattern. |
+| :FZF    | Search files                                                 |
+|         |                                                              |
+
+### FZF in terminal
+
+| Shortcut         | Use                               |
+| ---------------- | --------------------------------- |
+| <C-R> (Ctrl + R) | History                           |
+| Alt + C          | Folders inside of `.git` projects |
+| <C-T> (Ctrl + T) | Find files                        |
+
+
+
+### Startify
+
+Commands to use in startify
+
+| Command    | Use             |
+| ---------  | --------------  |
+| :SLoad     | load a session  |
+| :SSave[!]  | save a session  |
+| :SDelete[!]| delete a session|
+| :SClose    | close a session |
+
+
+
+
+
+
 
 ## How to use vim-plug
 
