@@ -1,13 +1,12 @@
 source $HOME/.config/nvim/keys/mappings.vim
-"source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/themes/nvcode.vim
 source $HOME/.config/nvim/themes/airline.vim
-"source $HOME/.config/nvim/themes/sonokai.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/general/settings.vim
 
-
+colorscheme sonokai
+ 
 let g:jedi#completions_enabled = 0 
 let g:deoplete#enable_at_startup = 1
 
