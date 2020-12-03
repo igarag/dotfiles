@@ -42,9 +42,9 @@ Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mhinz/vim-startify'
 " Themes
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
-"Plug 'joshdick/onedark.vim'
-"Plug 'morhetz/gruvbox'
-"Plug 'sainnhe/sonokai'
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/sonokai'
 " Themes for bottom bar
 Plug 'itchyny/lightline.vim'
 " scroll smoothie
