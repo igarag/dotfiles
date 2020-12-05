@@ -137,11 +137,11 @@ sudo apt install fzf
 
 ### FZF in terminal
 
-| Shortcut         | Use                               |
-| ---------------- | --------------------------------- |
-| <C-R> (Ctrl + R) | History                           |
-| Alt + C          | Folders inside of `.git` projects |
-| <C-T> (Ctrl + T) | Find files                        |
+| Shortcut           | Use                               |
+| ------------------ | --------------------------------- |
+| `<C-R>` (Ctrl + R) | History                           |
+| Alt + C            | Folders inside of `.git` projects |
+| `<C-T>` (Ctrl + T) | Find files                        |
 
 
 
