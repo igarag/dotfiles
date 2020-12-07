@@ -162,6 +162,14 @@ Commands to use in startify
 
 
 
+|         |          |
+| ------- | -------- |
+| `<M-j>` | M is Alt |
+|         |          |
+|         |          |
+
+
+
 ## How to use vim-plug
 
 You can execute following command in Nvim comand mode:
