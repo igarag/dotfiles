@@ -20,6 +20,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Python syntax
 Plug 'davidhalter/jedi-vim'
+Plug 'liuchengxu/vim-which-key'
+"Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
 " auto-complete parenthesis and other brackets
 Plug 'jiangmiao/auto-pairs'
 " Navegation tree (using F3 shortcut)
@@ -49,5 +52,6 @@ Plug 'sainnhe/sonokai'
 Plug 'itchyny/lightline.vim'
 " scroll smoothie
 Plug 'psliwka/vim-smoothie'
+" Cheatsheet
 
 call plug#end()
