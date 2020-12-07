@@ -2,6 +2,7 @@
 let g:mapleader = ','
 
 syntax enable                           " Enables syntax highlighing
+set relativenumber                      " Enable relative number
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
