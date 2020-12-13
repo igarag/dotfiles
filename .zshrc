@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ## My zshrc file:
 # ========================
 
@@ -18,7 +25,8 @@ export ZSH="/home/nachoaz/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -120,10 +128,12 @@ alias la='ls -A'
 alias l='ls -lhg'
 alias dd='dd status=progress'
 alias lc='colorls'
+alias ccat='batcat'
 alias ipconfig='ip -c --brief addr show'
 alias untar='tar -xvf'
 alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
 alias whereisthepi='nmap -sn 192.168.0.1-254'
+alias gg='lazygit'
 
 ### Git
 alias gs='git status'
@@ -134,7 +144,7 @@ alias gco='git checkout'
 ### Editor
 alias ty='typora'
 alias tyr='typora README.md'
-alias vim='nvim'
+# alias vim='nvim'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
@@ -160,3 +170,24 @@ alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
 unsetopt share_history
 
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/ros/noetic/setup.zsh
+export PATH="/home/nachoaz/.local/bin:$PATH"
+
+# export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../assets/models
+# export GAZEBO_MODEL_PATH=:/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/models
+# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/worlds/f1_1_simplecircuit.world
+# export /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
+# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/CustomRobots/f1/worlds/simple_circuit.world
+
+#
+#
+#########
+#
+#
+#
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
+export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../CustomRobots/f1/models
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
