@@ -12,9 +12,14 @@ nnoremap <M-l>    :vertical resize +2<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-" Easy CAPS
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
+" Easy CAPS --> Convert a word to caps using Ctrl+U
+" inoremap <c-u> <ESC>viwUi
+" nnoremap <c-u> viwU<Esc>
+
+" Copy or paste from X11 clipboard
+vmap <F6> :!xclip -f -sel clip<CR>
+map <F7> :-1r !xclip -o -sel clip<CR>
+nmap <F7> :-1r !xclip -o -sel clip<CR>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
