@@ -40,7 +40,7 @@ Plugins:
 
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
-- zsh-autosuggestions
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
   ```bash
   git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
@@ -56,6 +56,7 @@ Plugins:
 - [LazyGit](https://github.com/jesseduffield/lazygit)
 - [BatCat](https://github.com/sharkdp/bat)
 - [colorls](https://github.com/athityakumar/colorls#installation)
+- [Bpytop](https://github.com/aristocratos/bpytop#installation)
 
 ## Rofi
 
