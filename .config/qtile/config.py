@@ -56,7 +56,22 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 
     ### CUSTOM KEYS
-    Key([mod], 'r', lazy.spawn('rofi -show drun -show-icons')),
+    Key([mod], 'd', lazy.spawn('rofi -show drun -show-icons')),
+
+    ## BRIGHTNESS
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")
+
+    ## AUDIO
+    Key([], "XF86AudioLowerVolume", lazy.spawn(
+    "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    )),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn(
+        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    )),
+    Key([], "XF86AudioMute", lazy.spawn(
+        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        ),
     ]
 
 virtual_desktops = ["NAV", "TERM", "MAIL"]
@@ -116,9 +131,20 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("NachoAz", name="default"),
-                widget.TextBox("mod + r = launcher", foreground="#d75f5f"),
+                widget.TextBox("nachoaz", name="default"),
                 widget.Systray(),
+                widget.Sep(linewidth=1,
+                           padding=10,
+                           foreground='',
+                           background='',
+                           ),
+                widget.Battery(energy_now_file='charge_now',
+                               energy_full_file='charge_full',
+                               power_now_file='current_now',
+                               foreground='',
+                               background='',
+                               update_interval=5
+                                ),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
                 widget.QuickExit(),
             ],
@@ -184,4 +210,9 @@ layouts = [
     layout.Stack(stacks=2)
 ]
 
+
+
+
+
+# BRILLO
 
