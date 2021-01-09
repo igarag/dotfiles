@@ -12,8 +12,8 @@
 
 Ver en: 
 
-- Español [:es:](./README_ES.md)
-- English [:gb:](./README.md)
+- [:es: Español](./README_ES.md)
+- [:gb: English](./README.md)
 
 ------
 
