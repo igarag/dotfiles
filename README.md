@@ -1,9 +1,9 @@
 # My Dotfiles
 You can read it in:
 
-- Spanish[:es:](./README_ES.md)
+- [:es: Spanish](./README_ES.md)
 
-- English[:gb:](./README.md)
+- [:gb: English](./README.md)
 
 This repository presents configuration about the following programs:
 
