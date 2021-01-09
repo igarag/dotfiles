@@ -1,4 +1,10 @@
 # My Dotfiles
+You can read it in:
+
+- Spanish[:es:](./README_ES.md)
+
+- English[:gb:](./README.md)
+
 This repository presents configuration about the following programs:
 
 - Vim (code editor)
@@ -23,8 +29,6 @@ This repository presents configuration about the following programs:
 
 - [ctop](https://github.com/bcicen/ctop)
 
-  
-
 ### Tiling window manager resources
 
 Other libraries for customization:
@@ -34,7 +38,16 @@ Other libraries for customization:
 - [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
 - Multimonitor: [mons](https://github.com/Ventto/mons)
 
+## Terminals
+
+The terminals I normally use are:
+
+- Alacritty
+- Terminator
+
 ## zsh
+
+My favorite shell is zsh. It's very easy to configure and you can add extensions that improve its capabilities. The extension for it to look like in the image is PowerLevel10k. This version includes a program to configure it quickly and easily :smile:.
 
 Plugins:
 
@@ -58,15 +71,30 @@ Plugins:
 - [colorls](https://github.com/athityakumar/colorls#installation)
 - [Bpytop](https://github.com/aristocratos/bpytop#installation)
 
-## Rofi
+## Applicacion launcher
 
-Install Rofi vía apt:
+### Rofi
 
-```bash
-sudo apt install rofi
-```
+Rofi is a popular, easy and simple application launcher. Is a `dmenu` program. In a 'tiling window'  desktops environments is commonly executed by `Alt + D`.
 
-Add the following command to your custom shortcuts.
+![](./docs/rofi.gif)
+
+Rofi installation:
+
+- Debian:
+
+    ```bash
+    sudo apt install rofi
+    ```
+    
+- Arch:
+
+    ```bash
+    sudo pacman -S rofi
+    ```
+
+
+Add the following command to your custom shortcuts in order to executed like the above animation (launcher + icons).
 
 - Run programs:
 
@@ -80,7 +108,11 @@ Add the following command to your custom shortcuts.
     rofi -show window -show-icons
     ```
 
-Copy the `photon-orange.rasi` theme to `/usr/share/rofi/themes`.
+Copy the `photon-orange.rasi` theme to `/usr/share/rofi/themes` to complete the installation:
+
+```bash
+sudo cp ./config/rofi/photon-orange.rasi /usr/share/rofi/themes
+```
 
 ## NeoVim + Python
 
