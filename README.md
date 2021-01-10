@@ -1,4 +1,15 @@
 # My Dotfiles
+
+## Content
+
+- [Application launcher](#application-launcher)
+  - [Rofi](#rofi)
+- [Terminals](#terminals)
+- [Commandline tools](#commandline-tools)
+  - [LazyGit](#lazygit)
+  - [Ranger](#ranger)
+  - [BatCat](#batcat)
+
 You can read it in:
 
 - [:es: Spanish](./README_ES.md)
@@ -71,7 +82,7 @@ Plugins:
 - [colorls](https://github.com/athityakumar/colorls#installation)
 - [Bpytop](https://github.com/aristocratos/bpytop#installation)
 
-## Applicacion launcher
+## Applicaion launcher
 
 ### Rofi
 
