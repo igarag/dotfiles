@@ -110,7 +110,7 @@ Extensiones:
 
 ### LazyGit
 
-Es un potente gestor de Git por línea de comandos. Su apartado visual y la facilidad para acostumbrarte a los atajos de teclado hace que manejarlo aumente la productividad. Aporta mucho valor en el trabajo del día a día. Puedes ver en la imagen un ejemplo de este mismo repositorio mientras lo creo :wink:.
+[LazyGit](https://github.com/jesseduffield/lazygit) es un potente gestor de Git por línea de comandos. Su apartado visual y la facilidad para acostumbrarte a los atajos de teclado hace que manejarlo aumente la productividad. Aporta mucho valor en el trabajo del día a día. Puedes ver en la imagen un ejemplo de este mismo repositorio mientras lo creo :wink:.
 
 ![](./docs/lazygit.png)
 
@@ -154,3 +154,4 @@ Para instalarlo:
 En la siguiente imagen puedes ver un ejemplo simple de un fichero en Python:
 
 ![](./docs/batcat_demo.png)
+

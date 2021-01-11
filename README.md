@@ -56,9 +56,11 @@ The terminals I normally use are:
 - Alacritty
 - Terminator
 
-## zsh
+### Zsh
 
 My favorite shell is zsh. It's very easy to configure and you can add extensions that improve its capabilities. The extension for it to look like in the image is PowerLevel10k. This version includes a program to configure it quickly and easily :smile:.
+
+![](./docs/zsh.png)
 
 Plugins:
 
@@ -73,12 +75,58 @@ Plugins:
 
   
 
+## Command line tools
+
+### LazyGit
+
+[LazyGit](https://github.com/jesseduffield/lazygit) is a powerful command-line Git manager. The user interface is excellent and the ease of getting used to keyboard shortcuts increases your productivity. It brings a lot of value to your day-to-day work. You can see in the image an example of this same repository while I create it :wink:.
+
+![](./docs/lazygit.png)
+
+Para instalarlo:
+
+- Debian
+
+    ```bash
+    sudo apt install lazygit
+    ```
+    
+- Arch:
+
+    ```bash
+    sudo pacman -S lazygit
+    ```
+
+## Ranger
+
+<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/ranger.png">[Ranger](https://github.com/ranger/ranger) is a powerful command-line file manager written in Python that allows you to move around very quickly using Vim's shortcuts.
+
+Installing typing:
+
+- Debian:
+
+  ```bash
+  sudo apt install ranger
+  ```
+
+- Arch:
+
+  ```bash
+  sudo pacman -S ranger
+  ```
+
+## BatCat
+
+<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/batcat.png">[BatCat](https://github.com/sharkdp/bat) is an extension for the *shell* that allows the contents of the formatted files to be viewed. It makes it easier to understand the code when we make a 'cat' on them. With the command `batcat <file>` we start it up. In the `.zshrc` file I have an alias to launch it with `cat`, keeping the original functionality of `cat` intact (to copy the content of a file the original `cat` is more useful since the lines of code don't appear).
+
+In the following image you can see a simple example of a file in Python:
+
+![](/home/nachoaz/igarag/dotfiles/docs/batcat_demo.png)
+
 ## Programs
 
 - [Rofi](https://github.com/davatorium/rofi)
 - Flameshot
-- [LazyGit](https://github.com/jesseduffield/lazygit)
-- [BatCat](https://github.com/sharkdp/bat)
 - [colorls](https://github.com/athityakumar/colorls#installation)
 - [Bpytop](https://github.com/aristocratos/bpytop#installation)
 
