@@ -44,7 +44,7 @@ Los programas que suelo usar son:
 
 ### Rofi
 
-Rofi es un lanzador de aplicaciones muy popular, simple y sencillo de configurar. Es un programa de los denominados `dmenu`. En entornos de escritorio de tipo *'tiling window'* se ejecuta estre programa con el atajo: `Alt + D`.
+Rofi es un lanzador de aplicaciones muy popular, simple y sencillo de configurar. Es un programa de los denominados `dmenu`. En entornos de escritorio de tipo *'tiling window'* se ejecuta este programa con el atajo: `Alt + D`.
 
 ![](./docs/rofi.gif)
 
