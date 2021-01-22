@@ -17,9 +17,15 @@ inoremap kj <Esc>
 " nnoremap <c-u> viwU<Esc>
 
 " Copy or paste from X11 clipboard
-vmap <F6> :!xclip -f -sel clip<CR>
-map <F7> :-1r !xclip -o -sel clip<CR>
-nmap <F7> :-1r !xclip -o -sel clip<CR>
+"vmap <F6> :!xclip -f -sel clip<CR>
+"map <F7> :-1r !xclip -o -sel clip<CR>
+"nmap <F7> :-1r !xclip -o -sel clip<CR>
+" copy, cut and paste
+vmap <C-c> "+y
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
@@ -49,5 +55,5 @@ nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
 " Open Right Tag Ba" Open Right Tag Barr
-nmap <F8> :TagbarToggle<CR>
+nmap <F3> :TagbarToggle<CR>
 
