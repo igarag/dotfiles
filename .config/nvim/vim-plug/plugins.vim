@@ -27,6 +27,9 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
 " Navegation tree (using F3 shortcut)
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 Plug 'norcalli/nvim-colorizer.lua'
 " Bottom bar
 Plug 'vim-airline/vim-airline'
@@ -55,4 +58,12 @@ Plug 'psliwka/vim-smoothie'
 " Cheatsheet
 Plug 'majutsushi/tagbar'
 
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
+
+Plug 'jiangmiao/auto-pairs'
+Plug 'dense-analysis/ale'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'lepture/vim-jinja'
+Plug 'alvan/vim-closetag'
 call plug#end()
