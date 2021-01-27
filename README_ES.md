@@ -155,3 +155,7 @@ En la siguiente imagen puedes ver un ejemplo simple de un fichero en Python:
 
 ![](./docs/batcat_demo.png)
 
+## NMTUI
+
+En entornos de tipo *tiling window manager* o enfocados a la hiper-personalización y el uso del teclado no suele ser común tener el *widget* para conectarse a una red vía Wi-Fi. La herramienta por línea de comandos NMTUI permite de una manera ágil conectarse usando una interfaz simple.
+
