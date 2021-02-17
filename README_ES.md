@@ -9,6 +9,10 @@
   - [LazyGit](#lazygit)
   - [Ranger](#ranger)
   - [BatCat](#batcat)
+  - [fzf](#fzf)
+  - [NMTUI](#nmtui)
+  - [NCDU](#ncdu)
+  - [Trash-CLI](#trash-cli)
 
 Ver en: 
 
@@ -42,7 +46,7 @@ Los programas que suelo usar son:
 
 ## Lanzador de aplicaciones
 
-### Rofi
+### :rocket: Rofi
 
 Rofi es un lanzador de aplicaciones muy popular, simple y sencillo de configurar. Es un programa de los denominados `dmenu`. En entornos de escritorio de tipo *'tiling window'* se ejecuta este programa con el atajo: `Alt + D`.
 
@@ -82,7 +86,7 @@ Para instalar el tema que ves en la animación anterior copia el fichero con el 
 sudo cp ./config/rofi/photon-orange.rasi /usr/share/rofi/themes
 ```
 
-## Terminales
+## :desktop_computer: Terminales
 
 Los terminales que uso son:
 
@@ -129,7 +133,7 @@ Para instalarlo:
     ```
 
 
-## Ranger
+## :star: Ranger
 
 <img align="left" width="90" height="80" src="./docs/ranger.png">[Ranger](https://github.com/ranger/ranger) es un potente gestor de ficheros por línea de comandos escrito en Python que permite moverte de manera muy ágil usando los atajos de Vim.
 
@@ -147,7 +151,7 @@ Para instalarlo:
   sudo pacman -S ranger
   ```
 
-## BatCat
+## :bat: BatCat
 
 <img align="left" width="90" height="80" src="./docs/batcat.png">[BatCat](https://github.com/sharkdp/bat) es una extensión para la *shell* que permite ver el contenido de los ficheros con formato. Facilita entender el código  cuando hacemos un `cat` sobre ellos. Con el comando `batcat <fichero>` lo ponemos en marcha. En el fichero`.zshrc` tengo un alias para lanzarlo con `ccat`, manteniendo la funcionalidad original de `cat` intacta (para copiar el contenido de un fichero es más útil el `cat` original ya que no aparecen las líneas de código).
 
@@ -155,7 +159,55 @@ En la siguiente imagen puedes ver un ejemplo simple de un fichero en Python:
 
 ![](./docs/batcat_demo.png)
 
-## NMTUI
+## :mag_right: fzf
+
+<img align="left" width="90" height="80" src="./docs/fzf.png">[fzf](https://github.com/junegunn/fzf) es un buscador de directorios, ficheros y comandos sobre el historial del intérprete muy ágil y que permite búsquedas usando expresiones regulares y seleccionar los resultados de una lista de mejores candidatos. El uso de la librería se centra en su parte básica en tres comandos:
+
+| Atajo     | Resultado                            |
+| --------- | ------------------------------------ |
+| Control+T | Búsqueda de ficheros                 |
+| Control+R | Búsqueda en el historial de comandos |
+| Alt+C     | Búsqueda de directorios              |
+
+Instalación:
+
+- Debian:
+
+  ```bash
+  sudo apt install fzf
+  ```
+
+- Arch:
+
+  ```bash
+  sudo pacman -S fzf
+  ```
+
+## :signal_strength: NMTUI
 
 En entornos de tipo *tiling window manager* o enfocados a la hiper-personalización y el uso del teclado no suele ser común tener el *widget* para conectarse a una red vía Wi-Fi. La herramienta por línea de comandos NMTUI permite de una manera ágil conectarse usando una interfaz simple.
+
+## :floppy_disk: NCDU
+
+Analizador de disco por línea de comandos al estilo de la versión GUI de Baobab.
+
+Instalación:
+
+- Debian
+
+  ```
+  sudo apt install ncdu
+  ```
+
+## :recycle: ​Trash-CLI
+
+[Trash-cli](https://github.com/andreafrancia/trash-cli) es un interfaz por línea de comandos que ayuda prevenir borrado de archivos definitivo que haríamos con `rm`. Con trash-cli enviamos ficheros a la papelera, listamos el contenido, variamos o restauramos ficheros con un simple uso de sus comandos:
+
+```bash
+trash-put           envía archivos y carpetas a la papelera
+trash-empty         eliminar el contenido de la papelera
+trash-list          lista el contenido de la papelera
+trash-restore       restaura un archivo de la papelera
+trash-rm            elimina un único archivo de la papelera
+```
 
