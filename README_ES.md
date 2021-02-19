@@ -211,3 +211,9 @@ trash-restore       restaura un archivo de la papelera
 trash-rm            elimina un único archivo de la papelera
 ```
 
+Para instalar:
+
+```bash
+pip3 install -U trash-cli
+```
+
