@@ -123,12 +123,10 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 ### ALIAS ###
-alias ll='lc -l'
-alias lll='lc -la'
+alias l='lsd -l'
+alias ll='lsd -la'
 alias la='ls -A'
-alias l='ls -lhg'
 alias dd='dd status=progress'
-alias lc='colorls'
 alias ccat='batcat'
 alias ipconfig='ip -c --brief addr show'
 alias untar='tar -xvf'
@@ -146,7 +144,6 @@ alias gco='git checkout'
 alias ty='typora'
 alias tyr='typora README.md'
 # alias vim='nvim'
-
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
@@ -161,6 +158,13 @@ alias r='ranger'
 alias n='nautilus .'
 alias code='codium'
 
+### Navigate
+alias ia='cd /home/nachoaz/Dropbox/HOME/iA_Writter/Linux'
+alias gotfm='cd /home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo && pycharm-community . &'
+alias tfm='cd /home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo'
+alias sortcut='vim ~/.config/sxhkd/sxhkdrc'
+alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
+
 # Avoid share the terminal history between terminals
 unsetopt share_history
 
@@ -168,9 +172,24 @@ source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/ros/noetic/setup.zsh
 export PATH="/home/nachoaz/.local/bin:$PATH"
 
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
+# export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../assets/models
+# export GAZEBO_MODEL_PATH=:/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/models
+# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/worlds/f1_1_simplecircuit.world
+# export /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
+# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/CustomRobots/f1/worlds/simple_circuit.world
+
+#
+#
+#########
+#
+#
+#
+#source /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
 export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../CustomRobots/f1/models
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
