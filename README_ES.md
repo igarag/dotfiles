@@ -223,7 +223,7 @@ LSD es un software para vitaminar el comando por terminal `ls`.
 
 ![](./docs/lsd.png)
 
-Basándose en `colorls` añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar haciendo uso de un fichero de configuración `config.yaml` alojado en la carpeta personal del usuario: `~/.config/lsd/config.yaml`. Este directorio se crea automáticamente cuando se instala el programa.
+Basándose en `colorls` y escrito en el lenguaje Rust, lsd añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar haciendo uso de un fichero de configuración `config.yaml` alojado en la carpeta personal del usuario: `~/.config/lsd/config.yaml`. Este directorio se crea automáticamente cuando se instala el programa.
 
 Instalación:
 
