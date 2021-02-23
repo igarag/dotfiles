@@ -13,6 +13,7 @@
   - [NMTUI](#nmtui)
   - [NCDU](#ncdu)
   - [Trash-CLI](#trash-cli)
+  - [LS Deluxe](#lsdeluxe)
 
 Ver en: 
 
