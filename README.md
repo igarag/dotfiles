@@ -1,44 +1,51 @@
-# My Dotfiles
+<h1 align="center">
+  <img src="./docs/dotfiles.png" alt="Markdownify" width="200">
+  <br>
+  My Dotfiles
+  <br>
+</h1>
+
+
+
+
+<h4 align="center">Platform for management and visualization of algorithms</h4>
+
 
 ## Content
 
 - [Application launcher](#application-launcher)
   - [Rofi](#rofi)
 - [Terminals](#terminals)
-- [Commandline tools](#commandline-tools)
+- [Zsh](#zsh)
+- [Command-line tools](#commandline-tools)
   - [LazyGit](#lazygit)
   - [Ranger](#ranger)
   - [BatCat](#batcat)
+  - [fzf](#fzf)
+  - [NMTUI](#nmtui)
+  - [NCDU](#ncdu)
+  - [Trash-CLI](#trash-cli)
+  - [LS Deluxe](#lsdeluxe)
+  - [ctop](#ctop)
 
 You can read it in:
 
 - [:es: Spanish](./README_ES.md)
-
 - [:gb: English](./README.md)
 
 This repository presents configuration about the following programs:
 
-- Vim (code editor)
-
 - Neovim (code editor)
-
 - Ranger (file manager)
-
 - bspwm (window tiling manager)
-
-- sxhkd (shortcuts)
+- sxhkd (shortcuts for bspwm)
 
 - [Polybar](https://github.com/polybar/polybar)
-
-- [Suckless](https://suckless.org/)
 
 - Devhints: alias to return information about a library (hints) using [rich](https://github.com/willmcgugan/rich) Python library
 
 - [zsh (ohmyzsh)](https://github.com/ohmyzsh/ohmyzsh)
-
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-
-- [ctop](https://github.com/bcicen/ctop)
 
 ### Tiling window manager resources
 
@@ -48,6 +55,49 @@ Other libraries for customization:
 - bspwm
 - [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
 - Multimonitor: [mons](https://github.com/Ventto/mons)
+
+## Application launcher
+
+### Rofi
+
+Rofi is a popular, easy and simple application launcher. Is a `dmenu` program. In a 'tiling window'  desktops environments is commonly executed by `Alt + D`.
+
+![](./docs/rofi.gif)
+
+Rofi installation:
+
+- Debian:
+
+  ```bash
+  sudo apt install rofi
+  ```
+
+- Arch:
+
+  ```bash
+  sudo pacman -S rofi
+  ```
+
+
+Add the following command to your custom shortcuts in order to executed like the above animation (launcher + icons).
+
+- Run programs:
+
+  ```bash
+  rofi -show drun -show-icons
+  ```
+
+- Show windows
+
+  ```bash
+  rofi -show window -show-icons
+  ```
+
+Copy the `photon-orange.rasi` theme to `/usr/share/rofi/themes` to complete the installation:
+
+```bash
+sudo cp ./config/rofi/photon-orange.rasi /usr/share/rofi/themes
+```
 
 ## Terminals
 
@@ -73,17 +123,16 @@ Plugins:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
-  
 
 ## Command line tools
 
-### LazyGit
+## LazyGit
 
-[LazyGit](https://github.com/jesseduffield/lazygit) is a powerful command-line Git manager. The user interface is excellent and the ease of getting used to keyboard shortcuts increases your productivity. It brings a lot of value to your day-to-day work. You can see in the image an example of this same repository while I create it :wink:.
+<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/git-icon.png">[LazyGit](https://github.com/jesseduffield/lazygit) is a powerful command-line Git manager. The user interface is excellent and the ease of getting used to keyboard shortcuts increases your productivity. It brings a lot of value to your day-to-day work. You can see in the image an example of this same repository while I create it :wink:.
 
 ![](./docs/lazygit.png)
 
-Para instalarlo:
+Installation:
 
 - Debian
 
@@ -123,152 +172,91 @@ In the following image you can see a simple example of a file in Python:
 
 ![](/home/nachoaz/igarag/dotfiles/docs/batcat_demo.png)
 
-## Programs
+## :mag_right: fzf
 
-- [Rofi](https://github.com/davatorium/rofi)
-- Flameshot
-- [colorls](https://github.com/athityakumar/colorls#installation)
-- [Bpytop](https://github.com/aristocratos/bpytop#installation)
+<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/fzf.png">[fzf](https://github.com/junegunn/fzf) is a very agile search engine for directories, files and commands on the interpreter's history, allowing searches using regular expressions and selecting the results from a list of best candidates. The use of the library is focused in its basic part on three commands:
 
-## Applicaion launcher
+| Atajo     | Resultado                            |
+| --------- | ------------------------------------ |
+| Control+T | Búsqueda de ficheros                 |
+| Control+R | Búsqueda en el historial de comandos |
+| Alt+C     | Búsqueda de directorios              |
 
-### Rofi
-
-Rofi is a popular, easy and simple application launcher. Is a `dmenu` program. In a 'tiling window'  desktops environments is commonly executed by `Alt + D`.
-
-![](./docs/rofi.gif)
-
-Rofi installation:
+Install:
 
 - Debian:
 
-    ```bash
-    sudo apt install rofi
-    ```
-    
-- Arch:
-
-    ```bash
-    sudo pacman -S rofi
-    ```
-
-
-Add the following command to your custom shortcuts in order to executed like the above animation (launcher + icons).
-
-- Run programs:
-
   ```bash
-  rofi -show drun -show-icons
+  sudo apt install fzf
   ```
 
-- Show windows
+- Arch:
+
+  ```bash
+  sudo pacman -S fzf
+  ```
+
+## :signal_strength: NMTUI
+
+In *tiling window manager* environments or environments focused on hyper-customization and keyboard use it is not common to have the *widget* to connect to a network via Wi-Fi. The NMTUI command line tool allows in an agile way to connect using a simple interface.
+
+## :floppy_disk: NCDU
+
+Command line disk analyzer in the style of the GUI version of Baobab.
+
+Install:
+
+- Debian:
+
+  ```
+  sudo apt install ncdu
+  ```
+
+## :recycle: ​Trash-CLI
+
+[Trash-cli](https://github.com/andreafrancia/trash-cli) is a command line interface that helps prevent permanent file deletion that we would do with `rm`. With trash-cli we send files to the trash, list the contents, vary or restore files with a simple use of its commands:]
+
+```bash
+trash-put           envía archivos y carpetas a la papelera
+trash-empty         eliminar el contenido de la papelera
+trash-list          lista el contenido de la papelera
+trash-restore       restaura un archivo de la papelera
+trash-rm            elimina un único archivo de la papelera
+```
+
+Installation:
+
+```bash
+pip3 install -U trash-cli
+```
+
+## LSD (LSDeluxe)
+
+LSD is a software to enhance the `ls` terminal command.
+
+![](/home/nachoaz/igarag/dotfiles/docs/lsd.png)
+
+Based on `colorls` and written in the Rust language, `lsd` adds one more configuration element: it allows you to configure the elements you want to display by making use of a `config.yaml` configuration file located in the user's personal folder: `~/.config/lsd/config.yaml`. This directory is automatically created when the program is installed.
+
+Installation:
+
+- Debian, by downloading the binary from the [releases](https://github.com/Peltoche/lsd/releases) section and using `dpkg`:
 
     ```bash
-    rofi -show window -show-icons
+    sudo dpkg -i lsd_0.19.0_amd64.deb # adapt version number and architecture
     ```
 
-Copy the `photon-orange.rasi` theme to `/usr/share/rofi/themes` to complete the installation:
+- Arch:
 
-```bash
-sudo cp ./config/rofi/photon-orange.rasi /usr/share/rofi/themes
-```
-
-## NeoVim + Python
-
-### Install NeoVim
-
-Download de [appimage](https://github.com/neovim/neovim/releases) and move it into:
-
-```bash
-sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
-chmod +x /usr/local/bin/nvim
-```
-
-Extensions:
-
-- fzf
-- Denite
-- CoC
-
-Create file:
-
-```bash
-~/.config/nvim/init.vim
-```
-
-1. Install vim-plug itself:
-
-   ```bash
-   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-   ```
-
-2. Edit `init.vim` and add the configuration for vim-plug. Sample:
-
-   ```bash
-   call plug#begin('~/.local/share/nvim/plugged')
-   Plug 'davidhalter/jedi-vim'
-   call plug#end()
-   ```
+  ```bash
+  sudo pacman -S lsd
+  ```
 
 
+## ctop
 
-### FZF
+## <img align="left" width="100" height="40" src="./docs/ctop-icon.png">
 
-Install using:
+[Ctop](https://github.com/bcicen/ctop) is a command line container manager that allows you to see the status of Docker containers as well as CPU and memory consumption with auto-refresh. Ideal for when you have several services at once and want to monitor performance. In the animation they have in their repository you can see an example:
 
-```bash
-sudo apt install fzf
-```
-
-| Command | Use                                                          |
-| ------- | ------------------------------------------------------------ |
-| :BLines | Search patterns in one file. Return the lines contained in the pattern. |
-| :FZF    | Search files                                                 |
-|         |                                                              |
-
-### FZF in terminal
-
-| Shortcut           | Use                               |
-| ------------------ | --------------------------------- |
-| `<C-R>` (Ctrl + R) | History                           |
-| Alt + C            | Folders inside of `.git` projects |
-| `<C-T>` (Ctrl + T) | Find files                        |
-
-
-
-### Startify
-
-Commands to use in startify
-
-| Command    | Use             |
-| ---------  | --------------  |
-| :SLoad     | load a session  |
-| :SSave[!]  | save a session  |
-| :SDelete[!]| delete a session|
-| :SClose    | close a session |
-
-
-
-
-
-
-
-|         |          |
-| ------- | -------- |
-| `<M-j>` | M is Alt |
-|         |          |
-|         |          |
-
-
-
-## How to use vim-plug
-
-You can execute following command in Nvim comand mode:
-
-- Install plugins：`:PlugInstall`
-- Update plugins：`:PlugUpdate`
-- Remove plugins：`:PlugClean` (First, comment the plugin install command in `init.vim`. Open Nvim and use `:PlugClean` to uninstall plugins)
-- Check the plugin status：`:PlugStatus`
-- Upgrade vim-plug itself：`:PlugUpgrade`
-- Reload config file: `:so %`
+![](./docs/ctop-animation.gif)
