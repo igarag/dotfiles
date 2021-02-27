@@ -4,7 +4,7 @@
   Mis archivos de configuración
   <br>
 </h1>
-
+[:es:](./README_ES.md) [:gb:](./README.md)
 
 ## Contenido
 
@@ -22,11 +22,6 @@
   - [Trash-CLI](#trash-cli)
   - [LS Deluxe](#lsdeluxe)
   - [ctop](#ctop)
-
-Ver en: 
-
-- [:es: Español](./README_ES.md)
-- [:gb: English](./README.md)
 
 ------
 

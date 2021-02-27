@@ -5,6 +5,7 @@
   <br>
 </h1>
 
+[:es:](./README_ES.md) [:gb:](./README.md)
 ## Content
 
 - [Application launcher](#application-launcher)
@@ -21,11 +22,6 @@
   - [Trash-CLI](#trash-cli)
   - [LS Deluxe](#lsdeluxe)
   - [ctop](#ctop)
-
-You can read it in:
-
-- [:es: Spanish](./README_ES.md)
-- [:gb: English](./README.md)
 
 This repository presents configuration about the following programs:
 
