@@ -1,10 +1,17 @@
-# Mis archivos de configuración
+<h1 align="center">
+  <img src="./docs/dotfiles.png" alt="Markdownify" width="200">
+  <br>
+  Mis archivos de configuración
+  <br>
+</h1>
+
 
 ## Contenido
 
 - [Lanzador de aplicaciones](#lanzador-de-aplicaciones)
   - [Rofi](#rofi)
 - [Terminales](#terminales)
+- [Zsh](#zsh)
 - [Herramientas por línea de comandos](#herramientas-por-linea-de-comandos)
   - [LazyGit](#lazygit)
   - [Ranger](#ranger)
@@ -14,6 +21,7 @@
   - [NCDU](#ncdu)
   - [Trash-CLI](#trash-cli)
   - [LS Deluxe](#lsdeluxe)
+  - [ctop](#ctop)
 
 Ver en: 
 
@@ -30,19 +38,14 @@ En este documento se muestran los programas y configuraciones que tengo en las d
 Los programas que suelo usar son:
 
 - Neovim (code editor)
-
 - Ranger (file manager)
-
 - bspwm (window tiling manager)
-
-- sxhkd (shortcuts)
+- sxhkd (shortcuts para bspwn)
 
 - Devhints: alias to return information about a library (hints) using [rich](https://github.com/willmcgugan/rich) Python library
 
 - [zsh (ohmyzsh)](https://github.com/ohmyzsh/ohmyzsh)
-
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-
 - [ctop](https://github.com/bcicen/ctop)
 
 ## Lanzador de aplicaciones
@@ -113,7 +116,7 @@ Extensiones:
 
 ## Herramientas por línea de comandos
 
-### LazyGit
+### :tree LazyGit
 
 [LazyGit](https://github.com/jesseduffield/lazygit) es un potente gestor de Git por línea de comandos. Su apartado visual y la facilidad para acostumbrarte a los atajos de teclado hace que manejarlo aumente la productividad. Aporta mucho valor en el trabajo del día a día. Puedes ver en la imagen un ejemplo de este mismo repositorio mientras lo creo :wink:.
 
@@ -200,7 +203,7 @@ Instalación:
   sudo apt install ncdu
   ```
 
-## :recycle: ​Trash-CLI
+## :recycle: Trash-CLI
 
 [Trash-cli](https://github.com/andreafrancia/trash-cli) es un interfaz por línea de comandos que ayuda prevenir borrado de archivos definitivo que haríamos con `rm`. Con trash-cli enviamos ficheros a la papelera, listamos el contenido, variamos o restauramos ficheros con un simple uso de sus comandos:
 
@@ -224,7 +227,7 @@ LSD es un software para vitaminar el comando por terminal `ls`.
 
 ![](./docs/lsd.png)
 
-Basándose en `colorls` y escrito en el lenguaje Rust, lsd añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar haciendo uso de un fichero de configuración `config.yaml` alojado en la carpeta personal del usuario: `~/.config/lsd/config.yaml`. Este directorio se crea automáticamente cuando se instala el programa.
+Basándose en `colorls` y escrito en el lenguaje Rust, `lsd` añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar haciendo uso de un fichero de configuración `config.yaml` alojado en la carpeta personal del usuario: `~/.config/lsd/config.yaml`. Este directorio se crea automáticamente cuando se instala el programa.
 
 Instalación:
 
@@ -240,4 +243,8 @@ Instalación:
   sudo pacman -S lsd
   ```
 
-  
+## ctop
+
+<img align="left" width="100" height="40" src="./docs/ctop-icon.png">[Ctop](https://github.com/bcicen/ctop) es un gestor de contenedores por línea de comandos que permite ver el estado de los contenedores Docker así como el consumo de CPU y memoria con autorefresco. Ideal para cuando se tienen varios servicios a la vez y se quiere vigilar el rendimiento. En la animación que tienen en su repositorio puede verse un ejemplo:
+
+![](./docs/ctop-animation.gif)
