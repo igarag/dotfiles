@@ -139,7 +139,7 @@ Installation:
 
 ## Ranger
 
-<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/ranger.png">[Ranger](https://github.com/ranger/ranger) is a powerful command-line file manager written in Python that allows you to move around very quickly using Vim's shortcuts.
+<img align="left" width="90" height="80" src="./docs/ranger.png">[Ranger](https://github.com/ranger/ranger) is a powerful command-line file manager written in Python that allows you to move around very quickly using Vim's shortcuts.
 
 Installing typing:
 
@@ -157,7 +157,7 @@ Installing typing:
 
 ## BatCat
 
-<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/batcat.png">[BatCat](https://github.com/sharkdp/bat) is an extension for the *shell* that allows the contents of the formatted files to be viewed. It makes it easier to understand the code when we make a 'cat' on them. With the command `batcat <file>` we start it up. In the `.zshrc` file I have an alias to launch it with `cat`, keeping the original functionality of `cat` intact (to copy the content of a file the original `cat` is more useful since the lines of code don't appear).
+<img align="left" width="90" height="80" src="./docs/batcat.png">[BatCat](https://github.com/sharkdp/bat) is an extension for the *shell* that allows the contents of the formatted files to be viewed. It makes it easier to understand the code when we make a 'cat' on them. With the command `batcat <file>` we start it up. In the `.zshrc` file I have an alias to launch it with `cat`, keeping the original functionality of `cat` intact (to copy the content of a file the original `cat` is more useful since the lines of code don't appear).
 
 In the following image you can see a simple example of a file in Python:
 
@@ -165,7 +165,7 @@ In the following image you can see a simple example of a file in Python:
 
 ## :mag_right: fzf
 
-<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/fzf.png">[fzf](https://github.com/junegunn/fzf) is a very agile search engine for directories, files and commands on the interpreter's history, allowing searches using regular expressions and selecting the results from a list of best candidates. The use of the library is focused in its basic part on three commands:
+<img align="left" width="90" height="80" src="./docs/fzf.png">[fzf](https://github.com/junegunn/fzf) is a very agile search engine for directories, files and commands on the interpreter's history, allowing searches using regular expressions and selecting the results from a list of best candidates. The use of the library is focused in its basic part on three commands:
 
 | Atajo     | Resultado                            |
 | --------- | ------------------------------------ |
@@ -246,7 +246,7 @@ Installation:
 
 ## ctop
 
-## <img align="left" width="100" height="40" src="./docs/ctop-icon.png">
+<img align="left" width="90" height="40" src="./docs/ctop-icon.png">
 
 [Ctop](https://github.com/bcicen/ctop) is a command line container manager that allows you to see the status of Docker containers as well as CPU and memory consumption with auto-refresh. Ideal for when you have several services at once and want to monitor performance. In the animation they have in their repository you can see an example:
 
