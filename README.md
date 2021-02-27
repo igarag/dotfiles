@@ -5,12 +5,6 @@
   <br>
 </h1>
 
-
-
-
-<h4 align="center">Platform for management and visualization of algorithms</h4>
-
-
 ## Content
 
 - [Application launcher](#application-launcher)
