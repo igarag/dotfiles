@@ -6,6 +6,7 @@
 </h1>
 
 [:es:](./README_ES.md) · [:gb:](./README.md)
+
 ## Content
 
 - [Application launcher](#application-launcher)
