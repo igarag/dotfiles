@@ -119,7 +119,7 @@ Plugins:
 
 ## LazyGit
 
-<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/git-icon.png">[LazyGit](https://github.com/jesseduffield/lazygit) is a powerful command-line Git manager. The user interface is excellent and the ease of getting used to keyboard shortcuts increases your productivity. It brings a lot of value to your day-to-day work. You can see in the image an example of this same repository while I create it :wink:.
+<img align="left" width="90" height="80" src="./docs/git-icon.png">[LazyGit](https://github.com/jesseduffield/lazygit) is a powerful command-line Git manager. The user interface is excellent and the ease of getting used to keyboard shortcuts increases your productivity. It brings a lot of value to your day-to-day work. You can see in the image an example of this same repository while I create it :wink:.
 
 ![](./docs/lazygit.png)
 
