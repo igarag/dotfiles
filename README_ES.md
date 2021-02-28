@@ -31,6 +31,13 @@ En este documento se muestran los programas y configuraciones que tengo en las d
 - Pop! OS 20.04 - Gnome - Ubuntu based / Debian.
 - Manjaro 20.2 - Kde/Qtile - Arch.
 
+### Recursos para tiling window manager
+
+- [pywal](https://github.com/dylanaraps/pywal/wiki/Installation)
+- bspwm
+- [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
+- Multimonitor: [mons](
+
 ## Lanzador de aplicaciones
 
 ### :rocket: Rofi
