@@ -24,11 +24,14 @@
   - [LS Deluxe](#lsdeluxe)
   - [ctop](#ctop)
 
-- https://github.com/romkatv/powerlevel10k)
+---------------------
+
+This document shows the programs and configurations I have in the distributions I use. I currently work with:
+
+- Pop! OS 20.04 - Gnome - Ubuntu based / Debian.
+- Manjaro 20.2 - Kde/Qtile - Arch.
 
 ### Tiling window manager resources
-
-Other libraries for customization:
 
 - [pywal](https://github.com/dylanaraps/pywal/wiki/Installation)
 - bspwm
