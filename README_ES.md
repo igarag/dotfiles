@@ -31,19 +31,6 @@ En este documento se muestran los programas y configuraciones que tengo en las d
 - Pop! OS 20.04 - Gnome - Ubuntu based / Debian.
 - Manjaro 20.2 - Kde/Qtile - Arch.
 
-Los programas que suelo usar son:
-
-- Neovim (code editor)
-- Ranger (file manager)
-- bspwm (window tiling manager)
-- sxhkd (shortcuts para bspwn)
-
-- Devhints: alias to return information about a library (hints) using [rich](https://github.com/willmcgugan/rich) Python library
-
-- [zsh (ohmyzsh)](https://github.com/ohmyzsh/ohmyzsh)
-- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [ctop](https://github.com/bcicen/ctop)
-
 ## Lanzador de aplicaciones
 
 ### :rocket: Rofi

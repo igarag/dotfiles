@@ -24,19 +24,7 @@
   - [LS Deluxe](#lsdeluxe)
   - [ctop](#ctop)
 
-This repository presents configuration about the following programs:
-
-- Neovim (code editor)
-- Ranger (file manager)
-- bspwm (window tiling manager)
-- sxhkd (shortcuts for bspwm)
-
-- [Polybar](https://github.com/polybar/polybar)
-
-- Devhints: alias to return information about a library (hints) using [rich](https://github.com/willmcgugan/rich) Python library
-
-- [zsh (ohmyzsh)](https://github.com/ohmyzsh/ohmyzsh)
-- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- https://github.com/romkatv/powerlevel10k)
 
 ### Tiling window manager resources
 
