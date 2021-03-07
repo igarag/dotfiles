@@ -1,0 +1,11 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "'Inconsolata', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "workbench.colorTheme": "",
+
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorBlinking": "smooth",
+    "workbench.colorCustomizations": {
+    
+    },
+}
