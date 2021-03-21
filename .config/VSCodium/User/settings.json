@@ -1,5 +1,4 @@
 {
-    "window.zoomLevel": 0,
     "editor.fontFamily": "'Inconsolata', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.colorTheme": "",
 
@@ -8,4 +7,5 @@
     "workbench.colorCustomizations": {
     
     },
+    "workbench.tree.indent": 24
 }
