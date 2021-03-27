@@ -9,11 +9,6 @@ fi
 # ========================
 
 # To set zsh as default shell type: chsh -s $(which zsh)
-#
-#
-
-
-# Config file
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -108,11 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -121,57 +111,66 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-### ALIAS ###
+###
+# ALIAS
+###
+# Navigation
 alias l='lsd -l'
 alias ll='lsd -la'
 alias la='ls -A'
 alias dd='dd status=progress'
+
+# Programs and shortcuts
+alias r='ranger'
+alias n='nautilus .'
+alias code='codium'
 alias ccat='batcat'
+
+# Shortcuts
 alias ipconfig='ip -c --brief addr show'
 alias untar='tar -xvf'
 alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
 alias whereisthepi='nmap -sn 192.168.0.1-254'
-alias gg='lazygit'
 
-### Git
+# Git
+alias gg='lazygit'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gco='git checkout'
 
-### Editor
+# Editor
 alias ty='typora'
 alias tyr='typora README.md'
-# alias vim='nvim'
+alias vim='nvim'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
-### Docker
+# Docker
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}"'
 alias dim='docker images'
 alias dex='docker exec -it'
 alias dc='docker-compose'
 
-### Programs
-alias r='ranger'
-alias n='nautilus .'
-alias code='codium'
-
-### Navigate
-alias ia='cd /home/nachoaz/Dropbox/HOME/iA_Writter/Linux'
-alias gotfm='cd /home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo && pycharm-community . &'
-alias tfm='cd /home/nachoaz/igarag/TFM/2019-tfm-ignacio-arranz/gym-gazebo'
+# Tiling window experiments
 alias sortcut='vim ~/.config/sxhkd/sxhkdrc'
 alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
+
+# FZF enable
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+export PATH="/home/nachoaz/.local/bin:$PATH"
 
 # Avoid share the terminal history between terminals
 unsetopt share_history
 
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/ros/noetic/setup.zsh
-export PATH="/home/nachoaz/.local/bin:$PATH"
 
+# ROS + Gazebo
+source /opt/ros/noetic/setup.zsh
 # export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../assets/models
 # export GAZEBO_MODEL_PATH=:/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/models
 # export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/worlds/f1_1_simplecircuit.world
@@ -184,12 +183,9 @@ export PATH="/home/nachoaz/.local/bin:$PATH"
 #
 #
 #
-#source /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
-export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../CustomRobots/f1/models
+# source /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
+# export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../CustomRobots/f1/models
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+
