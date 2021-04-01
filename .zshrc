@@ -171,11 +171,11 @@ source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ROS + Gazebo
 source /opt/ros/noetic/setup.zsh
-# export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../assets/models
-# export GAZEBO_MODEL_PATH=:/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/models
-# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/worlds/f1_1_simplecircuit.world
-# export /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
-# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/CustomRobots/f1/worlds/simple_circuit.world
+export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../assets/models
+export GAZEBO_MODEL_PATH=:/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/models
+export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/worlds/f1_1_simplecircuit.world
+export /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
+export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/CustomRobots/f1/worlds/simple_circuit.world
 
 #
 #
