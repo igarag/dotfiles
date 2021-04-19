@@ -13,6 +13,7 @@
   - [Rofi](#rofi)
 - [Terminals](#terminals)
 - [Zsh](#zsh)
+- [PopShell](https://github.com/pop-os/shell)
 - [Command-line tools](#commandline-tools)
   - [LazyGit](#lazygit)
   - [Ranger](#ranger)
@@ -105,6 +106,11 @@ Plugins:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
+## PopShell
+
+<img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) is a great and powerful tool for Linux distributions with Gnome as desktop environment that automatically manages the windows of the operating system by placing them in a logical way. At the same time, it adjusts keyboard shortcuts using the Vim shortcut map.
+
+![](./docs/tiling-example.png)
 
 ## Command line tools
 
