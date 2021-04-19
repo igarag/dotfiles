@@ -104,11 +104,17 @@ Extensiones:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
+## PopShell
+
+<img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) es una gran y potente herramienta para distribuciones Linux con Gnome como entorno de escritorio que gestiona automáticamente las ventanas del sistema operativo colocándolas de forma lógica. Al mismo tiempo, ajusta los atajos de teclado utilizando el mapa de atajos de Vim.
+
+![](./docs/tiling-example.png)
+
 ## Herramientas por línea de comandos
 
-### :tree LazyGit
+### LazyGit
 
-[LazyGit](https://github.com/jesseduffield/lazygit) es un potente gestor de Git por línea de comandos. Su apartado visual y la facilidad para acostumbrarte a los atajos de teclado hace que manejarlo aumente la productividad. Aporta mucho valor en el trabajo del día a día. Puedes ver en la imagen un ejemplo de este mismo repositorio mientras lo creo :wink:.
+<img align="left" width="90" height="80" src="./docs/git-icon.png">[LazyGit](https://github.com/jesseduffield/lazygit) es un potente gestor de Git por línea de comandos. Su apartado visual y la facilidad para acostumbrarte a los atajos de teclado hace que manejarlo aumente la productividad. Aporta mucho valor en el trabajo del día a día. Puedes ver en la imagen un ejemplo de este mismo repositorio mientras lo creo :wink:.
 
 ![](./docs/lazygit.png)
 
