@@ -89,6 +89,14 @@ The terminals I normally use are:
 - Alacritty
 - Terminator
 
+To change the default terminal type:
+
+```bash
+sudo update-alternatives --config x-terminal-emulator
+```
+
+A table will appear where the desired terminal is selected with a number.
+
 ### Zsh
 
 My favorite shell is zsh. It's very easy to configure and you can add extensions that improve its capabilities. The extension for it to look like in the image is PowerLevel10k. This version includes a program to configure it quickly and easily :smile:.
