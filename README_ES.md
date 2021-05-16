@@ -87,6 +87,14 @@ Los terminales que uso son:
 - Alacritty
 - Terminator
 
+Para cambiar el terminal por defecto escribir:
+
+```bash
+sudo update-alternatives --config x-terminal-emulator
+```
+
+Aparecerá una tabla donde se selecciona con un número el terminal deseado.
+
 ### Zsh
 
 La shell que utilizo es Zsh por su facilidad en la configuración y en la inclusión de extensiones que mejoran sus capacidades. La extensión para que se vea como en la imagen es PowerLevel10k. Esta versión incluye un programa para configurarlo de manera rápida y fácil :smile:.
