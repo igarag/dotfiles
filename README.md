@@ -79,8 +79,15 @@ Add the following command to your custom shortcuts in order to executed like the
 Copy the `photon-orange.rasi` theme to `/usr/share/rofi/themes` to complete the installation:
 
 ```bash
-sudo cp ./config/rofi/photon-orange.rasi /usr/share/rofi/themes
+sudo cp ./config/rofi/photon-orange/photon-orange.rasi /usr/share/rofi/themes
 ```
+
+And set the theme typing:
+
+```bash
+rofi-theme-selector
+```
+
 
 ## Terminals
 
@@ -192,6 +199,15 @@ Install:
   sudo pacman -S fzf
   ```
 
+Configuration:
+
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+
+
 ## :signal_strength: NMTUI
 
 In *tiling window manager* environments or environments focused on hyper-customization and keyboard use it is not common to have the *widget* to connect to a network via Wi-Fi. The NMTUI command line tool allows in an agile way to connect using a simple interface.
@@ -256,3 +272,17 @@ Installation:
 [Ctop](https://github.com/bcicen/ctop) is a command line container manager that allows you to see the status of Docker containers as well as CPU and memory consumption with auto-refresh. Ideal for when you have several services at once and want to monitor performance. In the animation they have in their repository you can see an example:
 
 ![](./docs/ctop-animation.gif)
+
+
+
+## NeoVim
+
+
+
+### vim-plug
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
