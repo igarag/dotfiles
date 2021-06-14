@@ -96,6 +96,7 @@ The terminals I normally use are:
 
 - Alacritty
 - Terminator
+- rxvt-unicode
 
 To change the default terminal type:
 
