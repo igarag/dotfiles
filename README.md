@@ -14,7 +14,7 @@
 - [Terminals](#terminals)
 - [Zsh](#zsh)
 - [PopShell](https://github.com/pop-os/shell)
-- MailSpring
+- [MailSpring](#mailspring)
 - [Command-line tools](#commandline-tools)
   - [LazyGit](#lazygit)
   - [Ranger](#ranger)
@@ -123,21 +123,21 @@ Plugins:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
-## PopShell
+### PopShell
 
 <img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) is a great and powerful tool for Linux distributions with Gnome as desktop environment that automatically manages the windows of the operating system by placing them in a logical way. At the same time, it adjusts keyboard shortcuts using the Vim shortcut map.
 
 ![](./docs/tiling-example.png)
 
-## MailSpring
+### MailSpring
 
-MailSpring is an Open Source and powerful mail client.
+<img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client.
 
 
 
 ## Command line tools
 
-## LazyGit
+### LazyGit
 
 <img align="left" width="90" height="80" src="./docs/git-icon.png">[LazyGit](https://github.com/jesseduffield/lazygit) is a powerful command-line Git manager. The user interface is excellent and the ease of getting used to keyboard shortcuts increases your productivity. It brings a lot of value to your day-to-day work. You can see in the image an example of this same repository while I create it :wink:.
 
@@ -157,7 +157,7 @@ Installation:
     sudo pacman -S lazygit
     ```
 
-## Ranger
+### Ranger
 
 <img align="left" width="90" height="80" src="./docs/ranger.png">[Ranger](https://github.com/ranger/ranger) is a powerful command-line file manager written in Python that allows you to move around very quickly using Vim's shortcuts.
 
@@ -175,7 +175,7 @@ Installing typing:
   sudo pacman -S ranger
   ```
 
-## BatCat
+### BatCat
 
 <img align="left" width="90" height="80" src="./docs/batcat.png">[BatCat](https://github.com/sharkdp/bat) is an extension for the *shell* that allows the contents of the formatted files to be viewed. It makes it easier to understand the code when we make a 'cat' on them. With the command `batcat <file>` we start it up. In the `.zshrc` file I have an alias to launch it with `cat`, keeping the original functionality of `cat` intact (to copy the content of a file the original `cat` is more useful since the lines of code don't appear).
 
@@ -183,7 +183,7 @@ In the following image you can see a simple example of a file in Python:
 
 ![](/home/nachoaz/igarag/dotfiles/docs/batcat_demo.png)
 
-## :mag_right: fzf
+### :mag_right: fzf
 
 <img align="left" width="90" height="80" src="./docs/fzf.png">[fzf](https://github.com/junegunn/fzf) is a very agile search engine for directories, files and commands on the interpreter's history, allowing searches using regular expressions and selecting the results from a list of best candidates. The use of the library is focused in its basic part on three commands:
 
@@ -216,11 +216,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 
 
-## :signal_strength: NMTUI
+### :signal_strength: NMTUI
 
 In *tiling window manager* environments or environments focused on hyper-customization and keyboard use it is not common to have the *widget* to connect to a network via Wi-Fi. The NMTUI command line tool allows in an agile way to connect using a simple interface.
 
-## :floppy_disk: NCDU
+### :floppy_disk: NCDU
 
 Command line disk analyzer in the style of the GUI version of Baobab.
 
@@ -232,7 +232,7 @@ Install:
   sudo apt install ncdu
   ```
 
-## :recycle: ​Trash-CLI
+### :recycle: Trash-CLI
 
 [Trash-cli](https://github.com/andreafrancia/trash-cli) is a command line interface that helps prevent permanent file deletion that we would do with `rm`. With trash-cli we send files to the trash, list the contents, vary or restore files with a simple use of its commands:]
 
@@ -250,7 +250,7 @@ Installation:
 pip3 install -U trash-cli
 ```
 
-## LSD (LSDeluxe)
+### LSD (LSDeluxe)
 
 LSD is a software to enhance the `ls` terminal command.
 
@@ -273,7 +273,7 @@ Installation:
   ```
 
 
-## ctop
+### ctop
 
 <img align="left" width="90" height="40" src="./docs/ctop-icon.png">
 
@@ -283,11 +283,12 @@ Installation:
 
 
 
-## NeoVim
+### NeoVim
+
+<img align="left" width="90" height="80" src="./docs/neovim-logo.png">**Neovim** is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
 
 
-
-### vim-plug
+#### vim-plug
 
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
