@@ -9,6 +9,8 @@
 
 ## Content
 
+- Fonts
+
 - [Application launcher](#application-launcher)
   - [Rofi](#rofi)
 - [Terminals](#terminals)
@@ -31,7 +33,7 @@
 This document shows the programs and configurations I have in the distributions I use. I currently work with:
 
 - Pop! OS 20.04 - Gnome - Ubuntu based / Debian.
-- Manjaro 20.2 - Kde/Qtile - Arch.
+- Manjaro 20.2 - Gnome/Qtile - Arch.
 
 ### Tiling window manager resources
 
@@ -39,6 +41,15 @@ This document shows the programs and configurations I have in the distributions 
 - bspwm
 - [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
 - Multimonitor: [mons](https://github.com/Ventto/mons)
+
+## Fonts
+
+- [Caskadya](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip)
+- [FiraCode](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip)
+- [Hurmit](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hermit.zip)
+- [BlexMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/IBMPlexMono.zip)
+
+*You can test all the fonts in [programmingfonts.org](https://www.programmingfonts.org/#cascadia-code).*
 
 ## Application launcher
 
