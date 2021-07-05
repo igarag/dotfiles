@@ -142,7 +142,24 @@ Plugins:
 
 ### MailSpring
 
-<img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client.
+<img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client. I am using the "[predawn](https://github.com/adambmedia/N1-Predawn)" theme that the user "[asparc](https://github.com/asparc/predawn)" has modified.
+
+
+
+To modify the theme you have to open the directory where it is installed.
+
+- In **Ubuntu**: `~/snap/mailspring/common/packages/predawn`
+
+- Enable the developer flags (Developer --> Run with debug flags)
+
+- Reload the theme at each change by typing:
+
+  ```react
+  AppEnv.themes.setActiveTheme('ui-light'); // default theme (for example).
+  AppEnv.themes.setActiveTheme('predawn');  // Custom theme.
+  ```
+
+![](./mailspring-theme-predaw/fig/predawn-screen-plain.png)
 
 
 
