@@ -111,7 +111,7 @@ alias dd='dd status=progress'
 
 # Editor
 alias ty='typora'
-alias vim='nvim'
+# alias vim='nvim'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
@@ -126,8 +126,6 @@ alias r='ranger'
 alias n='nautilus .'
 alias code='codium'
 
-
-alias sortcut='vim ~/.config/sxhkd/sxhkdrc'                                                       alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
 
 alias disk='lsblk'
 
@@ -197,4 +195,27 @@ if [ ! "${bits}" == "" ]; then
 	fi
 }
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+source "$HOME/.cargo/env"
+
+# GAZEBO
+source /opt/ros/noetic/setup.bash
+export PATH="/home/nachoaz/.local/bin:$PATH"
+
+# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/../CustomRobots/f1/worlds/simple_circuit.world
+export GYM_GAZEBO_WORLD_CIRCUIT_F1=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/worlds/simple_circuit.world
+export GAZEBO_MODEL_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/models
+export GAZEBO_RESOURCE_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/worlds
+source $HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+########
+
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
