@@ -82,7 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-         zsh-autosuggestions)
+  zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,22 +103,29 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# neofetch
 ###
 # ALIAS
 ###
+
+# Configuration files
+alias vz='nvim ~/.zshrc'
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 # Navigation
 alias l='lsd -l'
 alias ll='lsd -la'
 alias la='ls -A'
 alias dd='dd status=progress'
+
+# Tools
+alias du='dust'
 
 # Programs and shortcuts
 alias r='ranger'
@@ -130,7 +137,7 @@ alias ccat='batcat'
 alias ipconfig='ip -c --brief addr show'
 alias untar='tar -xvf'
 alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
-alias whereisthepi='nmap -sn 192.168.0.1-254'
+alias whereisthepi='nmap -sn 192.168.1.1-254'
 
 # Git
 alias gg='lazygit'
@@ -164,28 +171,27 @@ export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 export PATH="/home/nachoaz/.local/bin:$PATH"
 
+### TheFuck
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias FUCK)
+
+# Node + Poetry
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+
 # Avoid share the terminal history between terminals
 unsetopt share_history
 
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# rupa/z --> z.sh
+source /usr/local/bin/z.sh
+
 # ROS + Gazebo
 source /opt/ros/noetic/setup.zsh
-export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../assets/models
-export GAZEBO_MODEL_PATH=:/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/models
-export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/../assets/worlds/f1_1_simplecircuit.world
-export /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
-export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/CustomRobots/f1/worlds/simple_circuit.world
 
-#
-#
-#########
-#
-#
-#
-# source /home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
-# export GAZEBO_MODEL_PATH=/home/nachoaz/igarag/jderobot/gym-gazebo-2/gym_gazebo/envs/installation/catkin_ws/../../CustomRobots/f1/models
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-
+##### 
+export GAZEBO_MODEL_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/../CustomRobots/f1/models
+export GAZEBO_RESOURCE_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/../CustomRobots/f1/worlds
+source $HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.zsh
