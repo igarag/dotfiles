@@ -9,7 +9,9 @@
     ~/.bashrc: bashrc
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
-
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.config/rofi: rofi
+    ~/.config/terminator/config: config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
