@@ -11,7 +11,12 @@
     ~/.vimrc: vimrc
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.config/rofi: rofi
+    ~/.config/nvim: nvim
     ~/.config/terminator/config: config
+    ~/.config/ranger/rc.conf: rc.conf
+    ~/.config/pop-shell/config.json: pop-shell
+    ~/.config/lsd/config.yaml: lsd
+    ~/.tmux.conf : tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
