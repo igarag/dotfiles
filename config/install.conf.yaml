@@ -1,0 +1,42 @@
+- defaultS:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      strerr: true
+
+- clean: ['~']
+
+- shell:
+    - ["mkdir -p $HOME/{.config}", Creating default directories]
+
+- link:
+    # ssh
+    ~/.ssh/config:
+        path: config/ssh/config
+        create: true
+    ~/.vimrc: config/vim/vimrc
+    ~/.Xresources: config/Xresources
+    # alacritty
+    ~/.config/alacritty/alacritty.yml: 
+        path: config/alacritty/alacritty.yml
+        create: true
+    # nvim
+    ~/.config/nvim: config/nvim
+    # bashrc
+    ~/.bashrc: config/bash/bashrc
+    ~/.profile: config/bash/profile
+    # zsh
+    ~/.zshrc: config/zsh/zshrc
+    ~/.aliasrc: config/zsh/aliasrc
+    # fzf
+    ~/.fzf.bash: config/fzf/fzf.bash
+    ~/.fzf.zsh: config/fzf/fzf.zsh
+    # rofi
+    ~/.config/rofi: config/rofi
+    # git
+    ~/.gitconfig: config/git/gitconfig
+    # tmux
+    ~/.tmux.conf: config/tmux/tmux.conf
+
