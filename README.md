@@ -327,3 +327,18 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 From *[habd.as](https://habd.as/post/installing-using-rupaz-shell-script/)*: [rupa/z](https://github.com/rupa/z) is an amazing shell script that allows users to traverse a filesystem in no time flat. Use it if you spend any time at all changing directories in a *nix environment. It will improve productivity and spare fat fingers quite a bit of backpedaling.
 
+## Useful links
+
+### Dotfiles manager
+
+- [Dotbot blog](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
+
+- [Dotfiles template](https://github.com/anishathalye/dotfiles_template)
+
+- [Dotfiles sample using dotbot](https://github.com/anishathalye/dotfiles/blob/63131479f69634843989ac1e07e9ee94b9f21935/.install.conf.yaml#L24-L26)
+- [More dotfiles sample](https://github.com/jesseleite/dotfiles/blob/master/install.conf.yaml)
+
+- [Dotfiles repository with package installation](https://github.com/jsonMartin/dotfiles)
+
+- [Dotfiles video tutorial](https://www.youtube.com/watch?v=E25gI87Ce1A)
+- [Dotfiles blog](https://www.notion.so/ARCHIVED-How-to-easily-back-up-and-restore-your-Linux-configuration-software-using-GIT-and-dot-0cee0a7e2bbc49ec8a425f42525fdb3f)
