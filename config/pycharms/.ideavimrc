@@ -1,0 +1,13 @@
+set relativenumber
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+nnoremap <C-c> <Esc>
+
+vmap <C-c> "+y
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
