@@ -13,6 +13,8 @@
   - [Rofi](#rofi)
 - [Terminales](#terminales)
 - [Zsh](#zsh)
+- PopShell
+- MailSpring
 - [Herramientas por línea de comandos](#herramientas-por-linea-de-comandos)
   - [LazyGit](#lazygit)
   - [Ranger](#ranger)
@@ -117,6 +119,25 @@ Extensiones:
 <img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) es una gran y potente herramienta para distribuciones Linux con Gnome como entorno de escritorio que gestiona automáticamente las ventanas del sistema operativo colocándolas de forma lógica. Al mismo tiempo, ajusta los atajos de teclado utilizando el mapa de atajos de Vim.
 
 ![](./docs/tiling-example.png)
+
+### MailSpring
+
+<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/mailspring-logo.jpg">MailsSpring es un poderoso cliente de correo de código libre. Uso el cliente con el tema "[predawn](https://github.com/adambmedia/N1-Predawn)", modificado por el usuario   "[asparc](https://github.com/asparc/predawn)".
+
+
+
+Para modificar un tema, hay que abrir el directorio donde se instala el programa:
+
+- En **Ubuntu**: `~/snap/mailspring/common/packages/predawn`
+- Habilitar el modo desarrollador (opción Developer -> Lanzar el programa con las opciones de depuración).
+- Recargar el tema con cada cambio, escribiendo:
+
+    ```react
+    AppEnv.themes.setActiveTheme('ui-light'); // default theme (for example).
+    AppEnv.themes.setActiveTheme('predawn');  // Custom theme.
+    ```
+
+![](/home/nachoaz/igarag/dotfiles/mailspring-theme-predaw/fig/predawn-screen-plain.png)
 
 ## Herramientas por línea de comandos
 
@@ -252,3 +273,19 @@ Instalación:
 <img align="left" width="100" height="40" src="./docs/ctop-icon.png">[Ctop](https://github.com/bcicen/ctop) es un gestor de contenedores por línea de comandos que permite ver el estado de los contenedores Docker así como el consumo de CPU y memoria con autorefresco. Ideal para cuando se tienen varios servicios a la vez y se quiere vigilar el rendimiento. En la animación que tienen en su repositorio puede verse un ejemplo:
 
 ![](./docs/ctop-animation.gif)
+
+## Useful links
+
+### Gestor de ficheros de configuración
+
+- [Blog de Dotbot](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
+
+- [Plantilla de ficheros de configuración](https://github.com/anishathalye/dotfiles_template)
+
+- [Ejemplo de uso de Dotfiles](https://github.com/anishathalye/dotfiles/blob/63131479f69634843989ac1e07e9ee94b9f21935/.install.conf.yaml#L24-L26)
+- [Más ejemplos de configuracíon](https://github.com/jesseleite/dotfiles/blob/master/install.conf.yaml)
+
+- [Repositorio con scripts para instalar paquetes en el sistema](https://github.com/jsonMartin/dotfiles)
+
+- [Dotfiles tutorial en videov](https://www.youtube.com/watch?v=E25gI87Ce1A)
+- [Otro blog de Dotfiles](https://www.notion.so/ARCHIVED-How-to-easily-back-up-and-restore-your-Linux-configuration-software-using-GIT-and-dot-0cee0a7e2bbc49ec8a425f42525fdb3f)
