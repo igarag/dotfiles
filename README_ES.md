@@ -33,6 +33,8 @@ En este documento se muestran los programas y configuraciones que tengo en las d
 - Pop! OS 20.04 - Gnome - Ubuntu based / Debian.
 - Manjaro 20.2 - Kde/Qtile - Arch.
 
+La gestión de los archivos y la instalación en el sistema se ha realizado usando [dotbot](https://github.com/anishathalye/dotbot).
+
 ### Recursos para tiling window manager
 
 - [pywal](https://github.com/dylanaraps/pywal/wiki/Installation)
