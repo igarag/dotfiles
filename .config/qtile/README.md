@@ -16,4 +16,30 @@
   . . .
   ```
 
+Library installed:
+
+- Pulseaudio:
+
+  ```bash
+  sudo pacman -S pulseaudio
+  ```
+
+- Pavucontrol
+
+  ```bash
+  sudo pacman -S pavucontrol
+  ```
+
+- Volumen icon:
+
+  ```bash
+  sudo pacman -S volumeicon
+  ```
+
+- nm-applet
+
+  ```bash
+  sudo pacman -S network-manager-applet
+  ```
+
   
