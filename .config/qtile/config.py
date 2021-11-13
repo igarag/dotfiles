@@ -60,6 +60,8 @@ keys = [
     # Custom shortcuts
     Key([alt], "d", lazy.spawn("rofi -show drun -show-icons"),
         desc="Spawn a command using a prompt widget"),
+    Key([alt], "s", lazy.spawn("rofi  -show find -modi find:~/.local/share/rofi/finder.sh"),
+        desc="Spawn a command using a prompt widget"),
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
@@ -109,6 +111,16 @@ layouts = [
     # layout.Zoomy(),
 ]
 
+colors = [["#282c34", "#282c34"], # panel background
+          ["#3d3f4b", "#434758"], # background for current screen tab
+          ["#ffffff", "#ffffff"], # font color for group names
+          ["#ff5555", "#ff5555"], # border line color for current tab
+          ["#74438f", "#74438f"], # border line color for 'other tabs' and color for 'odd widgets'
+          ["#4f76c7", "#4f76c7"], # color for the 'even widgets'
+          ["#e1acff", "#e1acff"], # window name
+          ["#ecbbfb", "#ecbbfb"]] # backbround for inactive screens
+
+
 widget_defaults = dict(
     font='sans',
     fontsize=12,
@@ -130,11 +142,50 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.Systray(
+                    background = colors[0],
+                    padding = 5
+                ),
+                widget.Sep(
+                       linewidth = 0,
+                       padding = 20,
+                       foreground = colors[0],
+                       background = colors[0]
+                       ),
                 widget.Volume(),
-                widget.Battery(),
-                widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
+                widget.Sep(
+                       linewidth = 0,
+                       padding = 20,
+                       foreground = colors[0],
+                       background = colors[0]
+                       ),
+                widget.BatteryIcon(),
+                widget.Battery(
+                    format = "{char} {percent:0.1%}",
+                    update_interval = 5,
+                    low_percentage = 0.10,
+                    unknown_char = "",
+                    full_char = "",
+                    charge_char = "+",
+                    discharge_char = "",
+                    empty_char = ""
+                ),
+                widget.Sep(
+                       linewidth = 0,
+                       padding = 20,
+                       foreground = colors[0],
+                       background = colors[0]
+                       ),
+                widget.Clock(format='%Y-%m-%d %a %H:%M'),
+                widget.Sep(
+                       linewidth = 0,
+                       padding = 20,
+                       foreground = colors[0],
+                       background = colors[0]
+                       ),
+                widget.QuickExit(
+                    default_text=""
+                ),
             ],
             30,
         ),
