@@ -147,27 +147,47 @@ screens = [
                     padding = 5
                 ),
                 widget.Sep(
-                       linewidth = 0,
-                       padding = 20,
-                       foreground = colors[0],
-                       background = colors[0]
+                    linewidth = 0,
+                    padding = 20,
+                    foreground = colors[0],
+                    background = colors[0]
                ),
                 widget.TextBox(
-                      text = " Vol:",
-                       foreground = colors[2],
-                       background = colors[5],
-                       padding = 0
+                    text = " Vol:",
+                    foreground = colors[2],
+                    background = colors[5],
+                    padding = 0
                 ),
                 widget.Volume(
-                       foreground = colors[2],
-                       background = colors[5],
-                       padding = 5
+                    foreground = colors[2],
+                    background = colors[5],
+                    padding = 5
                 ),
                 widget.Sep(
-                       linewidth = 0,
-                       padding = 20,
-                       foreground = colors[0],
-                       background = colors[0]
+                    linewidth = 0,
+                    padding = 20,
+                    foreground = colors[0],
+                    background = colors[0]
+                ),
+                widget.TextBox(
+                    background = colors[0],
+                    foreground = colors[5],
+                    padding = 0,
+                    fontsize = 37
+                ),
+                widget.Net(
+                    interface = "wlp62s0",
+                    format = '{down} ↓↑ {up}',
+                    foreground = colors[2],
+                    background = colors[5],
+                    padding = 5
+                ),
+                widget.TextBox(
+                    text = " 🖬",
+                    foreground = colors[2],
+                    background = colors[4],
+                    padding = 0,
+                    fontsize = 14
                 ),
                 widget.Memory(
                     foreground = colors[2],
@@ -179,12 +199,13 @@ screens = [
                     padding = 5,
                 ),
                 widget.Sep(
-                       linewidth = 0,
-                       padding = 20,
-                       foreground = colors[0],
-                       background = colors[0]
+                    linewidth = 0,
+                    padding = 20,
+                    foreground = colors[0],
+                    background = colors[0]
                 ),
                 widget.BatteryIcon(
+                    # theme_path="/home/nachoaz/.config/qtile/qtile-icons",
                 ),
                 widget.Battery(
                     format = "{char} {percent:2.0%}",
@@ -197,10 +218,10 @@ screens = [
                     empty_char = ""
                 ),
                 widget.Sep(
-                       linewidth = 0,
-                       padding = 20,
-                       foreground = colors[0],
-                       background = colors[0]
+                    linewidth = 0,
+                    padding = 20,
+                    foreground = colors[0],
+                    background = colors[0]
                 ),
                 widget.Clock(
                     foreground = colors[2],
@@ -208,11 +229,11 @@ screens = [
                     format='%Y-%m-%d %a %H:%M'
                 ),
                 widget.Sep(
-                       linewidth = 0,
-                       padding = 20,
-                       foreground = colors[0],
-                       background = colors[0]
-                       ),
+                    linewidth = 0,
+                    padding = 20,
+                    foreground = colors[0],
+                    background = colors[0]
+                ),
                 widget.QuickExit(
                     default_text=""
                 ),
