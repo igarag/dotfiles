@@ -151,17 +151,43 @@ screens = [
                        padding = 20,
                        foreground = colors[0],
                        background = colors[0]
-                       ),
-                widget.Volume(),
+               ),
+                widget.TextBox(
+                      text = " Vol:",
+                       foreground = colors[2],
+                       background = colors[5],
+                       padding = 0
+                ),
+                widget.Volume(
+                       foreground = colors[2],
+                       background = colors[5],
+                       padding = 5
+                ),
                 widget.Sep(
                        linewidth = 0,
                        padding = 20,
                        foreground = colors[0],
                        background = colors[0]
-                       ),
-                widget.BatteryIcon(),
+                ),
+                widget.Memory(
+                    foreground = colors[2],
+                    background = colors[4],
+                    format="Mem: {MemUsed: .0f} {mm}",
+                    measure_mem="M",
+                    update_interval=2.0,
+                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
+                    padding = 5,
+                ),
+                widget.Sep(
+                       linewidth = 0,
+                       padding = 20,
+                       foreground = colors[0],
+                       background = colors[0]
+                ),
+                widget.BatteryIcon(
+                ),
                 widget.Battery(
-                    format = "{char} {percent:0.1%}",
+                    format = "{char} {percent:2.0%}",
                     update_interval = 5,
                     low_percentage = 0.10,
                     unknown_char = "",
@@ -175,8 +201,12 @@ screens = [
                        padding = 20,
                        foreground = colors[0],
                        background = colors[0]
-                       ),
-                widget.Clock(format='%Y-%m-%d %a %H:%M'),
+                ),
+                widget.Clock(
+                    foreground = colors[2],
+                    background = colors[5],
+                    format='%Y-%m-%d %a %H:%M'
+                ),
                 widget.Sep(
                        linewidth = 0,
                        padding = 20,
