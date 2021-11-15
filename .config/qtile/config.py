@@ -84,6 +84,8 @@ keys = [
         desc="Spawn a command using a prompt widget"),
     Key([alt], "s", lazy.spawn("rofi  -show find -modi find:~/.local/share/rofi/finder.sh"),
         desc="Spawn a command using a prompt widget"),
+    Key([alt], "f", lazy.spawn("rofi -show window -show-icons"),
+        desc="Spawn a command using a prompt widget"),
     Key([mod], "f", lazy.spawn("pcmanfm"),
         desc="Spawn a command using a prompt widget"),
     Key([mod], "p", lazy.spawn(f"{HOME}/.local/share/rofi/monitor_layout.sh"),
