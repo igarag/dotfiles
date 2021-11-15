@@ -42,4 +42,36 @@ Library installed:
   sudo pacman -S network-manager-applet
   ```
 
+- Net-tools
+
+  ```bash
+  sudo pacman -S net-tools
+  ```
+
+- PCManFM
+
+  ```bash
+  sudo pacman -S pacmanfm
+  ```
+
+- Scripts de ROFI para cambiar el monitor: Mover el script de monitor a `~/.local/bin/`
+
+  ```bash
+  cp monitor_layout ~/.local/bin/
+  ```
+
+
+- Dependencia para que aparezca el reproductor en el top-bar
+
+  ```bash
+  pip install -U dbus-next
+  ```
+
+
+- Icono de la batería
+
+  ```bash
+  sudo pacman -S cbatticon
+  ```
+
   
