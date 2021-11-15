@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import subprocess
 from typing import List, Optional  # noqa: F401
 
@@ -9,9 +10,30 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-mod = "mod4"
+mod = "mod4"  # Super keyboard key
 alt = "mod1"
+HOME = str(Path.home())
 terminal = guess_terminal()
+last_playing = "spotify"
+SPACE = 12
+
+def playpause(qtile):
+    global last_playing
+    if qtile.widgetMap['clementine'].is_playing() or last_playing == 'clementine':
+        qtile.cmd_spawn("clementine --play-pause")
+        last_playing = 'clementine'
+    if qtile.widgetMap['spotify'].is_playing or last_playing == 'spotify':
+        qtile.cmd_spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
+        last_playing = 'spotify'
+
+def next_prev(state):
+    def f(qtile):
+        if qtile.widgetMap['clementine'].is_playing():
+            qtile.cmd_spawn("clementine --%s" % state)
+        if qtile.widgetMap['spotify'].is_playing:
+            cmd = "Next" if state == "next" else "Previous"
+            qtile.cmd_spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.%s" % cmd)
+    return f
 
 keys = [
     # Switch between windows
@@ -62,6 +84,10 @@ keys = [
         desc="Spawn a command using a prompt widget"),
     Key([alt], "s", lazy.spawn("rofi  -show find -modi find:~/.local/share/rofi/finder.sh"),
         desc="Spawn a command using a prompt widget"),
+    Key([mod], "f", lazy.spawn("pcmanfm"),
+        desc="Spawn a command using a prompt widget"),
+    Key([mod], "p", lazy.spawn(f"{HOME}/.local/share/rofi/monitor_layout.sh"),
+        desc="Spawn a command using a prompt widget"),
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
@@ -69,9 +95,12 @@ keys = [
 ]
 
 __groups = {
-    1: Group("WWW", matches=[Match(wm_class=["brave"])]),
-    2: Group("DEV", matches=[Match(wm_class=["vim"])]),
-    3: Group("MNG"),
+    1: Group("", layout='monadtall', matches=[Match(wm_class=["brave"])]),
+    2: Group("", layout='monadtall', matches=[Match(wm_class=["Alacritty"])]),
+    3: Group("", layout='monadtall', matches=[Match(wm_class=["vim", "vscodium", "vscode"])]),
+    4: Group("", layout='floating', matches=[Match(wm_class=["mailspring", "telegram-desktop", "typora"])]),
+    5: Group("", layout='floating', matches=[Match(wm_class=[])]),
+    6: Group("", layout="floating", matches=[Match(wm_class=["Spotify"])]),
 }
 
 groups = [__groups[i] for i in __groups]
@@ -94,15 +123,24 @@ for i in groups:
         #     desc="move focused window to group {}".format(i.name)),
     ])
 
+### Layouts
+layout_theme = {
+    "border_width": 4,
+    "margin": 8,
+    "border_focus": "#098758",
+    # "border_normal": "#098758"
+}
+
+
 layouts = [
-    layout.Columns(border_focus_stack=['#d75f5f', '#8f3d3d'], border_width=4),
+    layout.Columns(border_focus_stack=['#098758', '#098758'], border_width=4),
     layout.Max(),
     layout.Floating(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    # layout.MonadTall(),
+    layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -132,78 +170,65 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
+                widget.GroupBox(
+                    fontsize=25,
+                ),
+                # widget.Prompt(),
+                widget.WindowName(
+                    font="Inconsolata",
+                    fontsize=20,
+                ),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.Systray(
-                    background = colors[0],
-                    padding = 5
+               
+                widget.Mpris2(
+                    name="spotify",
+                    objname="org.mpris.MediaPlayer2.spotify",
+                    display_metadata=['xesam:title', 'xesam:artist'],
+                    scroll_chars=None,
+                    stop_pause_text='',
+                    **widget_defaults
                 ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 20,
-                    foreground = colors[0],
-                    background = colors[0]
-               ),
+                widget.Spacer(length=SPACE),
                 widget.TextBox(
-                    text = " Vol:",
-                    foreground = colors[2],
-                    background = colors[5],
-                    padding = 0
-                ),
-                widget.Volume(
-                    foreground = colors[2],
-                    background = colors[5],
-                    padding = 5
-                ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 20,
-                    foreground = colors[0],
-                    background = colors[0]
-                ),
-                widget.TextBox(
-                    background = colors[0],
+                    text="",
+                    background = colors[2],
                     foreground = colors[5],
                     padding = 0,
-                    fontsize = 37
+                    fontsize = 20
                 ),
                 widget.Net(
-                    interface = "wlp62s0",
-                    format = '{down} ↓↑ {up}',
-                    foreground = colors[2],
-                    background = colors[5],
-                    padding = 5
+                    font="Inconsolata",
+                    fontsize=20,
+                    interface="wlp62s0",
+                    format='{down} ↓↑ {up}',
+                    foreground=colors[2],
+                    background=colors[5],
+                    padding=5
                 ),
                 widget.TextBox(
-                    text = " 🖬",
-                    foreground = colors[2],
-                    background = colors[4],
-                    padding = 0,
-                    fontsize = 14
+                    text="",
+                    foreground=colors[2],
+                    background=colors[4],
+                    padding=0,
+                    fontsize=20
                 ),
                 widget.Memory(
-                    foreground = colors[2],
-                    background = colors[4],
-                    format="Mem: {MemUsed: .0f} {mm}",
-                    measure_mem="M",
+                    font="Inconsolata",
+                    fontsize=20,
+                    foreground=colors[2],
+                    background=colors[4],
+                    format="Mem:{MemUsed: 0.1f} {mm}",
+                    measure_mem="G",
                     update_interval=2.0,
-                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
-                    padding = 5,
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
+                    padding=5,
                 ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 20,
-                    foreground = colors[0],
-                    background = colors[0]
-                ),
+                widget.Spacer(length=SPACE),
                 widget.BatteryIcon(
                     # theme_path="/home/nachoaz/.config/qtile/qtile-icons",
                 ),
@@ -217,26 +242,37 @@ screens = [
                     discharge_char = "",
                     empty_char = ""
                 ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 20,
-                    foreground = colors[0],
-                    background = colors[0]
+                widget.Spacer(length=SPACE),
+                widget.TextBox(
+                    text = "",
+                    foreground = colors[2],
+                    background = colors[5],
+                    padding = 0,
+                    fontsize = 20
                 ),
                 widget.Clock(
+                    font="Inconsolata",
+                    fontsize=20,
                     foreground = colors[2],
                     background = colors[5],
                     format='%Y-%m-%d %a %H:%M'
                 ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 20,
-                    foreground = colors[0],
-                    background = colors[0]
+
+                widget.Spacer(length=SPACE),
+                widget.CurrentLayoutIcon(scale=0.65),
+                # widget.CurrentLayout(
+                #     font="Inconsolata",
+                #     fontsize=15,
+                # ),
+                widget.Systray(
+                    background = colors[0],
+                    padding = 5
                 ),
-                widget.QuickExit(
-                    default_text=""
-                ),
+                # widget.QuickExit(
+                #     fontsize=20,
+                #     default_text=""
+                # ),
+                widget.Spacer(length=SPACE),
             ],
             30,
         ),
@@ -289,3 +325,23 @@ wmname = "LG3D"
 def autostart():
     home = os.path.expanduser('~')
     subprocess.Popen([home + '/.config/qtile/autostart.sh'])
+
+
+
+
+from libqtile.command import lazy as lazy_mouse
+mouse = [
+    Drag(
+        [mod],
+        "Button1",
+        lazy_mouse.window.set_position_floating(),
+        start=lazy_mouse.window.get_position()
+    ),
+    Drag(
+        [alt],
+        "Button1",
+        lazy_mouse.window.set_size_floating(),
+        start=lazy_mouse.window.get_size()
+    ),
+    Click([mod], "Button2", lazy_mouse.window.bring_to_front())
+]
