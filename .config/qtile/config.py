@@ -65,6 +65,9 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
+    # Toggle floating
+    Key([mod], "g", lazy.window.toggle_floating()),
+
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -79,21 +82,38 @@ keys = [
     # System manager
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    
     # Custom shortcuts
+
+    # Toggle floating
     Key([alt], "d", lazy.spawn("rofi -show drun -show-icons"),
         desc="Spawn a command using a prompt widget"),
-    Key([alt], "s", lazy.spawn("rofi  -show find -modi find:~/.local/share/rofi/finder.sh"),
-        desc="Spawn a command using a prompt widget"),
-    Key([alt], "f", lazy.spawn("rofi -show window -show-icons"),
+    Key([alt], "Tab", lazy.spawn("rofi -show window -show-icons"),
         desc="Spawn a command using a prompt widget"),
     Key([mod], "f", lazy.spawn("pcmanfm"),
         desc="Spawn a command using a prompt widget"),
     Key([mod], "p", lazy.spawn(f"{HOME}/.local/share/rofi/monitor_layout.sh"),
         desc="Spawn a command using a prompt widget"),
+
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"))
+    
+    # # Volume
+    # Key([], "XF86AudioLowerVolume", lazy.spawn(
+    #     "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    # )),
+    # Key([], "XF86AudioRaiseVolume", lazy.spawn(
+    #     "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    # )),
+    # Key([], "XF86AudioMute", lazy.spawn(
+    #     "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    # )),
+
+    # # Brightness
+    # Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    # Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 ]
 
 __groups = {
@@ -282,13 +302,13 @@ screens = [
 ]
 
 # Drag floating layouts.
-mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(),
-         start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front())
-]
+# mouse = [
+#     Drag([mod], "Button1", lazy.window.set_position_floating(),
+#          start=lazy.window.get_position()),
+#     Drag([mod], "Button3", lazy.window.set_size_floating(),
+#          start=lazy.window.get_size()),
+#     Click([mod], "Button2", lazy.window.bring_to_front())
+# ]
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
