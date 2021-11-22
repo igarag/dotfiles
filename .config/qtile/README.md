@@ -74,4 +74,10 @@ Library installed:
   sudo pacman -S cbatticon
   ```
 
+- Redshift para reducir el brillo al modo noche:
+
+  ```bash
+  sudo pacman -S redshift
+  ```
+
   
