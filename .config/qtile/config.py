@@ -86,6 +86,7 @@ keys = [
     Key([alt], "d", lazy.spawn("rofi -show drun -show-icons"), desc="Spawn a command using a prompt widget"),
     Key([alt], "Tab", lazy.spawn("rofi -show window -show-icons"), desc="Spawn a command using a prompt widget"),
     Key([mod], "f", lazy.spawn("pcmanfm"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "o", lazy.spawn("pavucontrol"), desc="Spawn a command using a prompt widget"),
     Key([mod], "p", lazy.spawn(f"{HOME}/.local/share/rofi/monitor_layout.sh"), desc="Spawn a command using a prompt widget"),
 
     # Sound
@@ -164,20 +165,25 @@ layouts = [
     # layout.Zoomy(),
 ]
 
-colors = [["#282c34", "#282c34"], # panel background
-          ["#3d3f4b", "#434758"], # background for current screen tab
-          ["#ffffff", "#ffffff"], # font color for group names
-          ["#ff5555", "#ff5555"], # border line color for current tab
-          ["#74438f", "#74438f"], # border line color for 'other tabs' and color for 'odd widgets'
-          ["#4f76c7", "#4f76c7"], # color for the 'even widgets'
-          ["#e1acff", "#e1acff"], # window name
-          ["#ecbbfb", "#ecbbfb"]] # backbround for inactive screens
+# Bar colours
+def init_colors():
+    return [["#2E3440", "#2E3440"],  # color 0
+            ["#2E3440", "#2E3440"],  # color 1
+            ["#c0c5ce", "#c0c5ce"],  # color 2
+            ["#fba922", "#fba922"],  # color 3
+            ["#3384d0", "#3384d0"],  # color 4
+            ["#f3f4f5", "#f3f4f5"],  # color 5
+            ["#cd1f3f", "#cd1f3f"],  # color 6
+            ["#62FF00", "#62FF00"],  # color 7
+            ["#6790eb", "#6790eb"],  # color 8
+            ["#a9a9a9", "#a9a9a9"]]  # color 9
 
+colors = init_colors()
 
 widget_defaults = dict(
-    font='sans',
-    fontsize=12,
-    padding=3,
+    font='UbuntuMono Nerd Font',
+    fontsize=14,
+    padding=2,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -186,12 +192,22 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    fontsize=25,
+                    fontsize=24,
+                    background=colors[1],
+                    foreground=colors[6],
                 ),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ), 
                 # widget.Prompt(),
                 widget.WindowName(
-                    font="Inconsolata",
-                    fontsize=20,
+                    font="UbuntuMono Nerd Font",
+                    fontsize=14,
+                    background=colors[1],
+                    foreground=colors[5],
                 ),
                 widget.Chord(
                     chords_colors={
@@ -199,128 +215,206 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-               
+                widget.TextBox(
+                    text="",
+                    fontsize=18,
+                    background=colors[1],
+                    foreground=colors[5],
+                    padding=0,
+                ),
                 widget.Mpris2(
                     name="spotify",
                     objname="org.mpris.MediaPlayer2.spotify",
                     display_metadata=['xesam:title', 'xesam:artist'],
                     scroll_chars=None,
                     stop_pause_text='',
-                    **widget_defaults
+                    **widget_defaults,
+                    foreground=colors[5],
+                    background=colors[1],
                 ),
-                widget.Spacer(length=SPACE),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ), 
                 widget.TextBox(
                     text="",
-                    background = colors[2],
-                    foreground = colors[5],
-                    padding = 0,
-                    fontsize = 20
+                    fontsize=14,
+                    background=colors[1],
+                    foreground=colors[5],
                 ),
                 widget.Net(
-                    font="UbuntuMono Nerd Font",
-                    fontsize=20,
                     interface="wlp62s0",
                     format='{down} ↓↑ {up}',
+                    font="UbuntuMono Nerd Font",
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
+                    padding=5,
+                ),
+                widget.Sep(
+                    linewidth=1,
                     foreground=colors[2],
-                    background=colors[5],
-                    padding=5
+                    background=colors[1],
+                    padding=10,
                 ),
                 widget.TextBox(
                     text="  🖥️ ",
+                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e htop')},
+                    fontsize=12,
                     foreground=colors[6],
                     background=colors[1],
-                    mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e gtop')},
-                    padding = 2,
-                    fontsize=12
                 ),
                 widget.CPU(
-                    format = '{load_percent}% ',
-                    font = "UbuntuMono Nerd Font",
-                    fontsize = 14,
-                    foreground = colors[5],
-                    background = colors[1],
-                    update_interval = 3
-                ),
-                widget.TextBox(
-                    text="",
-                    foreground=colors[2],
-                    background=colors[4],
-                    padding=0,
-                    fontsize=20
-                ),
-                widget.Memory(
+                    update_interval=3,
+                    format='{load_percent}% ',
                     font="UbuntuMono Nerd Font",
-                    fontsize=20,
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
+                ),
+                widget.Sep(
+                    linewidth=1,
                     foreground=colors[2],
-                    background=colors[4],
-                    format="{MemUsed: 0.1f} {mm}",
-                    measure_mem="G",
-                    update_interval=2.0,
-                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
-                    padding=5,
+                    background=colors[1],
+                    padding=10,
                 ),
                 widget.TextBox(
-                        text="  🧠 ",
-                        foreground=colors[4],
-                        background=colors[1],
-                        mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e htop')},
-                        padding = 0,
-                        fontsize=12
+                    text="  🧠 ",
+                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e htop')},
+                    fontsize=12,
+                    foreground=colors[4],
+                    background=colors[1],
                 ),
                 widget.Memory(
-                        font="UbuntuMono Nerd Font",
-                        format='{MemUsed: 0.1f} {mm} ',
-                        update_interval=1,
-                        fontsize=14,
-                        foreground=colors[5],
-                        background=colors[1]
+                    format='{MemUsed: 0.1f} {mm} ',
+                    update_interval=1,
+                    measure_mem="G",
+                    font="UbuntuMono Nerd Font",
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
                 ),
-
-                widget.Spacer(length=SPACE),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
                 widget.BatteryIcon(
                     # theme_path="/home/nachoaz/.config/qtile/qtile-icons",
+                    foreground=colors[5],
+                    background=colors[1],
                 ),
                 widget.Battery(
-                    format = "{char} {percent:2.0%}",
-                    update_interval = 5,
-                    low_percentage = 0.10,
-                    unknown_char = "",
-                    full_char = "",
-                    charge_char = "+",
-                    discharge_char = "",
-                    empty_char = ""
+                    format="{char} {percent:2.0%}",
+                    update_interval=5,
+                    low_percentage=0.10,
+                    unknown_char="",
+                    full_char="",
+                    charge_char="+",
+                    discharge_char="",
+                    empty_char="",
+                    foreground=colors[5],
+                    background=colors[1],
                 ),
-                widget.Spacer(length=SPACE),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
                 widget.TextBox(
-                    text = "",
-                    foreground = colors[2],
-                    background = colors[5],
-                    padding = 0,
-                    fontsize = 20
+                    text=" ",
+                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
                 ),
+                widget.Bluetooth(
+                    fmt='{} ',
+                    font="UbuntuMono Nerd Font",
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
+                ),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
+                widget.TextBox(
+                    text=" 🔊",
+                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
+                    fontsize=12,
+                    foreground=colors[5],
+                    background=colors[1],
+                ),
+                widget.Volume(
+                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
+                    fmt='{} ',
+                    font="UbuntuMono Nerd Font",
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
+                ),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
+                widget.TextBox(
+                    text=" 📅 ",
+                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e calcurse')},
+                    fontsize=12,
+                    foreground=colors[5],
+                    background=colors[1],
+                ), 
                 widget.Clock(
-                    font="Inconsolata",
-                    fontsize=20,
-                    foreground = colors[2],
-                    background = colors[5],
-                    format='%Y-%m-%d %a %H:%M'
+                    format="%Y-%m-%d - %H:%M",
+                    font="UbuntuMono Nerd Font",
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
                 ),
-
-                widget.Spacer(length=SPACE),
-                widget.CurrentLayoutIcon(scale=0.65),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
+                widget.CurrentLayoutIcon(
+                    scale=0.65,
+                    foreground=colors[5],
+                    background=colors[1],
+                ),
                 # widget.CurrentLayout(
                 #     font="Inconsolata",
                 #     fontsize=15,
                 # ),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
                 widget.Systray(
-                    background = colors[0],
-                    padding = 5
+                    background=colors[0],
+                    padding=5,
                 ),
                 # widget.QuickExit(
                 #     fontsize=20,
                 #     default_text=""
                 # ),
-                widget.Spacer(length=SPACE),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
             ],
             30,
         ),
@@ -376,7 +470,7 @@ def autostart():
 
 
 
-
+# Mouse - Move windows
 from libqtile.command import lazy as lazy_mouse
 mouse = [
     Drag(
