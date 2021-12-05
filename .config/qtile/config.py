@@ -12,9 +12,14 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"  # Super keyboard key
 alt = "mod1"
+control = "control"
+
 HOME = str(Path.home())
+
 terminal = guess_terminal()
+
 last_playing = "spotify"
+
 SPACE = 12
 
 def playpause(qtile):
@@ -41,27 +46,20 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(),
-        desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "h", lazy.layout.shuffle_left(),
-        desc="Move window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.shuffle_right(),
-        desc="Move window to the right"),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(),
-        desc="Move window down"),
+    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
+    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
 
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(),
-        desc="Grow window to the left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(),
-        desc="Grow window to the right"),
-    Key([mod, "control"], "j", lazy.layout.grow_down(),
-        desc="Grow window down"),
+    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
+    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
+    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
@@ -72,8 +70,7 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
-    Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack"),
+    Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
@@ -86,14 +83,10 @@ keys = [
     # Custom shortcuts
 
     # Toggle floating
-    Key([alt], "d", lazy.spawn("rofi -show drun -show-icons"),
-        desc="Spawn a command using a prompt widget"),
-    Key([alt], "Tab", lazy.spawn("rofi -show window -show-icons"),
-        desc="Spawn a command using a prompt widget"),
-    Key([mod], "f", lazy.spawn("pcmanfm"),
-        desc="Spawn a command using a prompt widget"),
-    Key([mod], "p", lazy.spawn(f"{HOME}/.local/share/rofi/monitor_layout.sh"),
-        desc="Spawn a command using a prompt widget"),
+    Key([alt], "d", lazy.spawn("rofi -show drun -show-icons"), desc="Spawn a command using a prompt widget"),
+    Key([alt], "Tab", lazy.spawn("rofi -show window -show-icons"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "f", lazy.spawn("pcmanfm"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "p", lazy.spawn(f"{HOME}/.local/share/rofi/monitor_layout.sh"), desc="Spawn a command using a prompt widget"),
 
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
@@ -224,13 +217,29 @@ screens = [
                     fontsize = 20
                 ),
                 widget.Net(
-                    font="Inconsolata",
+                    font="UbuntuMono Nerd Font",
                     fontsize=20,
                     interface="wlp62s0",
                     format='{down} ↓↑ {up}',
                     foreground=colors[2],
                     background=colors[5],
                     padding=5
+                ),
+                widget.TextBox(
+                    text="  🖥️ ",
+                    foreground=colors[6],
+                    background=colors[1],
+                    mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e gtop')},
+                    padding = 2,
+                    fontsize=12
+                ),
+                widget.CPU(
+                    format = '{load_percent}% ',
+                    font = "UbuntuMono Nerd Font",
+                    fontsize = 14,
+                    foreground = colors[5],
+                    background = colors[1],
+                    update_interval = 3
                 ),
                 widget.TextBox(
                     text="",
@@ -240,16 +249,33 @@ screens = [
                     fontsize=20
                 ),
                 widget.Memory(
-                    font="Inconsolata",
+                    font="UbuntuMono Nerd Font",
                     fontsize=20,
                     foreground=colors[2],
                     background=colors[4],
-                    format="Mem:{MemUsed: 0.1f} {mm}",
+                    format="{MemUsed: 0.1f} {mm}",
                     measure_mem="G",
                     update_interval=2.0,
                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
                     padding=5,
                 ),
+                widget.TextBox(
+                        text="  🧠 ",
+                        foreground=colors[4],
+                        background=colors[1],
+                        mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e htop')},
+                        padding = 0,
+                        fontsize=12
+                ),
+                widget.Memory(
+                        font="UbuntuMono Nerd Font",
+                        format='{MemUsed: 0.1f} {mm} ',
+                        update_interval=1,
+                        fontsize=14,
+                        foreground=colors[5],
+                        background=colors[1]
+                ),
+
                 widget.Spacer(length=SPACE),
                 widget.BatteryIcon(
                     # theme_path="/home/nachoaz/.config/qtile/qtile-icons",
