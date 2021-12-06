@@ -84,6 +84,7 @@ keys = [
 
     # Toggle floating
     Key([alt], "d", lazy.spawn("rofi -show drun -show-icons"), desc="Spawn a command using a prompt widget"),
+    Key([alt], "f", lazy.spawn("rofi -show window -show-icons"), desc="Spawn a command using a prompt widget"),
     Key([alt], "Tab", lazy.spawn("rofi -show window -show-icons"), desc="Spawn a command using a prompt widget"),
     Key([mod], "f", lazy.spawn("pcmanfm"), desc="Spawn a command using a prompt widget"),
     Key([mod], "o", lazy.spawn("pavucontrol"), desc="Spawn a command using a prompt widget"),
@@ -116,7 +117,7 @@ __groups = {
     3: Group("", layout='monadtall', matches=[Match(wm_class=["vim", "vscodium", "vscode"])]),
     4: Group("", layout='floating', matches=[Match(wm_class=["mailspring", "telegram-desktop", "typora"])]),
     5: Group("", layout='floating', matches=[Match(wm_class=[])]),
-    6: Group("", layout="floating", matches=[Match(wm_class=["Spotify"])]),
+    6: Group("", layout="floating", matches=[Match(wm_class=["spotify"])]),
 }
 
 groups = [__groups[i] for i in __groups]
