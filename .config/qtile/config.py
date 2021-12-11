@@ -245,6 +245,16 @@ screens = [
                     background=colors[1],
                     foreground=colors[5],
                 ),
+                widget.Systray(
+                    background=colors[0],
+                    padding=5,
+                ),
+                widget.Sep(
+                    linewidth=1,
+                    foreground=colors[2],
+                    background=colors[1],
+                    padding=10,
+                ),
                 widget.Net(
                     interface="wlp62s0",
                     format='{down} ↓↑ {up}',
@@ -374,13 +384,6 @@ screens = [
                     foreground=colors[5],
                     background=colors[1],
                 ), 
-                widget.Clock(
-                    format="%Y-%m-%d - %H:%M",
-                    font="UbuntuMono Nerd Font",
-                    fontsize=14,
-                    foreground=colors[5],
-                    background=colors[1],
-                ),
                 widget.Sep(
                     linewidth=1,
                     foreground=colors[2],
@@ -402,9 +405,12 @@ screens = [
                     background=colors[1],
                     padding=10,
                 ),
-                widget.Systray(
-                    background=colors[0],
-                    padding=5,
+                widget.Clock(
+                    format="%Y-%m-%d - %H:%M",
+                    font="UbuntuMono Nerd Font",
+                    fontsize=14,
+                    foreground=colors[5],
+                    background=colors[1],
                 ),
                 # widget.QuickExit(
                 #     fontsize=20,
