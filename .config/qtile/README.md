@@ -80,4 +80,11 @@ Library installed:
   sudo pacman -S redshift
   ```
 
+
+- Bluetoothctl
+
+  ```bash
+  sudo pacman -S bluez-utils
+  ```
+
   
