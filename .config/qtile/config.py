@@ -3,6 +3,7 @@ from pathlib import Path
 import subprocess
 from typing import List, Optional  # noqa: F401
 
+from libqtile import qtile
 from libqtile.backend.base import Window
 from libqtile.layout.base import Layout
 from libqtile import bar, layout, widget, hook
@@ -17,6 +18,7 @@ control = "control"
 HOME = str(Path.home())
 
 terminal = guess_terminal()
+# terminal = "alacritty"
 
 last_playing = "spotify"
 
@@ -255,24 +257,24 @@ screens = [
                     background=colors[1],
                     padding=10,
                 ),
-                widget.Net(
-                    interface="wlp62s0",
-                    format='{down} ↓↑ {up}',
-                    font="UbuntuMono Nerd Font",
-                    fontsize=14,
-                    foreground=colors[5],
-                    background=colors[1],
-                    padding=5,
-                ),
-                widget.Sep(
-                    linewidth=1,
-                    foreground=colors[2],
-                    background=colors[1],
-                    padding=10,
-                ),
+                # widget.Net(
+                #     interface="wlp62s0",
+                #     format='{down} ↓↑ {up}',
+                #     font="UbuntuMono Nerd Font",
+                #     fontsize=14,
+                #     foreground=colors[5],
+                #     background=colors[1],
+                #     padding=5,
+                # ),
+                # widget.Sep(
+                #     linewidth=1,
+                #     foreground=colors[2],
+                #     background=colors[1],
+                #     padding=10,
+                # ),
                 widget.TextBox(
                     text="  🖥️ ",
-                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e htop')},
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e htop')},
                     fontsize=12,
                     foreground=colors[6],
                     background=colors[1],
@@ -293,7 +295,7 @@ screens = [
                 ),
                 widget.TextBox(
                     text="  🧠 ",
-                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e htop')},
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e htop')},
                     fontsize=12,
                     foreground=colors[4],
                     background=colors[1],
@@ -338,7 +340,7 @@ screens = [
                 ),
                 widget.TextBox(
                     text=" ",
-                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
                     fontsize=14,
                     foreground=colors[5],
                     background=colors[1],
@@ -358,13 +360,13 @@ screens = [
                 ),
                 widget.TextBox(
                     text=" 🔊",
-                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
                     fontsize=12,
                     foreground=colors[5],
                     background=colors[1],
                 ),
                 widget.Volume(
-                    mouse_callbacks={'Button1': lambda qtile: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(terminal + ' -e pulsemixer')},
                     fmt='{} ',
                     font="UbuntuMono Nerd Font",
                     fontsize=14,
