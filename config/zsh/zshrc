@@ -192,6 +192,6 @@ source /usr/local/bin/z.sh
 source /opt/ros/noetic/setup.zsh
 
 ##### 
-export GAZEBO_MODEL_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/../CustomRobots/f1/models
-export GAZEBO_RESOURCE_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/../CustomRobots/f1/worlds
+export GAZEBO_MODEL_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/models
+export GAZEBO_RESOURCE_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/worlds
 source $HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.zsh
