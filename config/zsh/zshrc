@@ -112,56 +112,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 ###
 # ALIAS
 ###
-
-# Configuration files
-alias vz='nvim ~/.zshrc'
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Navigation
-alias l='lsd -l'
-alias ll='lsd -la'
-alias la='ls -A'
-alias dd='dd status=progress'
-
-# Tools
-alias du='dust'
-
-# Programs and shortcuts
-alias r='ranger'
-alias n='nautilus .'
-alias code='codium'
-alias ccat='batcat'
-
-# Shortcuts
-alias ipconfig='ip -c --brief addr show'
-alias untar='tar -xvf'
-alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
-alias whereisthepi='nmap -sn 192.168.1.1-254'
-
-# Git
-alias gg='lazygit'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit -m'
-alias gco='git checkout'
-
-# Editor
-alias ty='typora'
-alias tyr='typora README.md'
-alias vim='nvim'
-alias jn='jupyter-notebook'
-alias jl='jupyter lab'
-
-# Docker
-alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}"'
-alias dim='docker images'
-alias dex='docker exec -it'
-alias dc='docker-compose'
-
-# Tiling window experiments
-alias sortcut='vim ~/.config/sxhkd/sxhkdrc'
-alias bspwmrc='vim ~/.config/bspwm/bspwmrc'
+source ~/.aliasrc
 
 # FZF enable
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
