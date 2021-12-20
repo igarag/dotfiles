@@ -26,6 +26,8 @@
     ~/.config/nvim: config/nvim
     # bashrc
     ~/.bashrc: config/bash/bashrc
+    # aliasrc
+    ~/.aliasrc: config/bash/aliasrc
     ~/.profile: config/bash/profile
     # zsh
     ~/.zshrc: config/zsh/zshrc
