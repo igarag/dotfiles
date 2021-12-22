@@ -103,28 +103,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -lh'
-alias dd='dd status=progress'
-
-# Editor
-alias ty='typora'
-# alias vim='nvim'
-alias jn='jupyter-notebook'
-alias jl='jupyter lab'
-
-### Docker
-alias dps='docker ps'
-alias dim='docker images'
-alias dex='docker exec -it'
-alias dc='docker-compose'
-
-### Navigate
-alias r='ranger'
-alias n='nautilus .'
-alias code='codium'
+###########
+# ALIASRC
+###########
+source ~/.aliasrc
 
 
 alias disk='lsblk'
@@ -208,14 +190,6 @@ export GYM_GAZEBO_WORLD_CIRCUIT_F1=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/
 export GAZEBO_MODEL_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/models
 export GAZEBO_RESOURCE_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/worlds
 source $HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
+source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
 ########
 
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
