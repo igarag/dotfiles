@@ -248,26 +248,26 @@ Para instalar:
 pip3 install -U trash-cli
 ```
 
-## LSD (LSDeluxe)
+## exa
 
-LSD es un software para vitaminar el comando por terminal `ls`.
+**exa** es un software para vitaminar el comando por terminal `ls`.
 
-![](./docs/lsd.png)
+![](./docs/exa.png)
 
-Basándose en `colorls` y escrito en el lenguaje Rust, `lsd` añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar haciendo uso de un fichero de configuración `config.yaml` alojado en la carpeta personal del usuario: `~/.config/lsd/config.yaml`. Este directorio se crea automáticamente cuando se instala el programa.
+Basándose en `colorls` y en `lsd` (LSDeluxe) y escrito en el lenguaje Rust, exa añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar. Se hacen uso de los `alias` para lanzar diferentes configuraciones.
 
 Instalación:
 
 - Debian, descargando el binario de la [sección de "releases"](https://github.com/Peltoche/lsd/releases) y haciendo uso de `dpkg`:
 
   ```bash
-  sudo dpkg -i lsd_0.19.0_amd64.deb # adapt version number and architecture
+  sudo apt install exa
   ```
 
 - Arch:
 
   ```bash
-  sudo pacman -S lsd
+  sudo pacman -S exa
   ```
 
 ## ctop
