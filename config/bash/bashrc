@@ -1,6 +1,14 @@
-# ~/.bashrc: executed by bash(1) for non-login shells
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# FZF
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# RUST
+source "$HOME/.cargo/env"
+
+# ALIASRC
+source ~/.aliasrc
+
+
+### Default config .bashrc
 
 # If not running interactively, don't do anything
 case $- in
@@ -24,13 +32,6 @@ HISTFILESIZE=2000
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -103,10 +104,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-###########
-# ALIASRC
-###########
-source ~/.aliasrc
+liasrc
 
 
 alias disk='lsblk'
@@ -177,19 +175,4 @@ if [ ! "${bits}" == "" ]; then
 	fi
 }
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-source "$HOME/.cargo/env"
-
-# GAZEBO
-source /opt/ros/noetic/setup.bash
-export PATH="/home/nachoaz/.local/bin:$PATH"
-
-# export GYM_GAZEBO_WORLD_CIRCUIT_F1=/home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/../CustomRobots/f1/worlds/simple_circuit.world
-export GYM_GAZEBO_WORLD_CIRCUIT_F1=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/worlds/simple_circuit.world
-export GAZEBO_MODEL_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/models
-export GAZEBO_RESOURCE_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/worlds
-source $HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-source /home/nachoaz/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.bash
-########
 
