@@ -23,7 +23,7 @@
   - [NMTUI](#nmtui)
   - [NCDU](#ncdu)
   - [Trash-CLI](#trash-cli)
-  - [LS Deluxe](#lsdeluxe)
+  - [exa](#exa)
   - [ctop](#ctop)
 
 ------
@@ -41,6 +41,15 @@ La gestión de los archivos y la instalación en el sistema se ha realizado usan
 - bspwm
 - [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
 - Multimonitor: [mons](
+
+## Fonts
+
+- [Caskadya](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip)
+- [FiraCode](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip)
+- [Hurmit](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hermit.zip)
+- [BlexMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/IBMPlexMono.zip)
+
+*Pueden probarse las fuentes de manera online en [programmingfonts.org](https://www.programmingfonts.org/#cascadia-code).*
 
 ## Lanzador de aplicaciones
 
