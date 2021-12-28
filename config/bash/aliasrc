@@ -8,6 +8,7 @@
 
 # Configuration files
 alias vz='nvim ~/.zshrc'
+alias python='python3'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
