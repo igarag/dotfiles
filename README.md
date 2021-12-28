@@ -278,11 +278,11 @@ Installation:
 pip3 install -U trash-cli
 ```
 
-### exa
+### :notebook: exa
 
 **exa** is a software to enhance the `ls` terminal command.
 
-![](/home/nachoaz/igarag/dotfiles/docs/exa.png)
+![](./docs/exa.png)
 
 Based on `colorls` and `lsd` (LSDeluxe) and written in the Rust language, exa adds one more element of configuration: it allows you to configure the elements you want to display. Use is made of `alias` to launch different configurations.
 
