@@ -1,0 +1,53 @@
+#    ___   ___                    
+#   / _ | / (_)__ ____ ________   
+#  / __ |/ / / _ `(_-</ __/ __/   
+# /_/ |_/_/_/\_,_/___/_/  \__/    
+# -----------------------------                               
+
+# Configuration files
+alias vz='nvim ~/.zshrc'
+alias python='python3'
+alias pip='pip3'
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Programs and shortcuts
+alias r='ranger'
+alias n='nautilus .'
+alias code='codium'
+alias ccat='batcat'
+alias ty='typora'
+alias tyr='typora README.md'
+alias vim='nvim'
+alias jn='jupyter-notebook'
+alias jl='jupyter lab'
+
+# Docker
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}"'
+alias dim='docker images'
+alias dex='docker exec -it'
+alias dc='docker-compose'
+
+# Shortcuts
+alias ipconfig='ip -c --brief addr show'
+alias untar='tar -xvf'
+alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
+alias whereisthepi='nmap -sn 192.168.1.1-254'
+
+# Git
+alias g='lazygit'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gco='git checkout'
+
+## MODERN UNIX
+
+# Navigation
+alias l='exa -l'
+alias ll='exa -la'
+alias la='ls -A'
+
+# Tools
+alias du='dust'
+
