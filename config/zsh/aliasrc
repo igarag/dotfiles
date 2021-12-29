@@ -7,10 +7,9 @@
 # -----------------------------                               
 
 # Configuration files
+alias vreload='source ~/.zshrc'
 alias vz='nvim ~/.zshrc'
-alias python='python3'
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vb='nvim ~/.bashrc'
 
 # Programs and shortcuts
 alias r='ranger'
@@ -35,7 +34,8 @@ alias dlf='docker logs -f'
 # Shortcuts
 alias ipconfig='ip -c --brief addr show'
 alias untar='tar -xvf'
-alias forecast='curl -X GET wttr.in 2>/dev/null' # solo hoy --> | tail -n 50 | head -n 17 | tail -n 10'
+# Forecast: (just today) --> | tail -n 50 | head -n 17 | tail -n 10'
+alias forecast='curl -X GET wttr.in 2>/dev/null'
 alias whereisthepi='nmap -sn 192.168.1.1-254'
 
 # Git
@@ -47,8 +47,12 @@ alias gc='git commit -m'
 alias gco='git checkout'
 
 # Python
+alias python='python3'
+alias pip='pip3'
 alias dj='python manage.py'
 alias djr='python manage.py runserver'
+alias djmm='python manage.py makemigrations'
+alias djm='python manage.py migrate'
 alias test='python manage.py test -s --logging-clear-handlers --noinput'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
