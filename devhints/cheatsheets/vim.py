@@ -15,8 +15,8 @@ cheatsheets = [
     ],
     [
         "^+w + h/j/k/l",
-        "Move to editor (left, down, up, right)"
-        "."
+        "Move to editor (left, down, up, right)",
+        ".",
     ],
 ]
 
