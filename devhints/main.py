@@ -11,7 +11,6 @@ table.add_column("Example", justify="left")
 from cheatsheets.vim import cheatsheets
 
 for cheatsheet in cheatsheets:
-    print(cheatsheet)
     table.add_row(cheatsheet[0], cheatsheet[1], cheatsheet[2])
 
 console.print(table)
