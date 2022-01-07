@@ -1,3 +1,5 @@
+import click 
+
 from rich.console import Console
 from rich.table import Column, Table
 
@@ -14,4 +16,5 @@ for cheatsheet in cheatsheets:
     table.add_row(cheatsheet[0], cheatsheet[1], cheatsheet[2])
 
 console.print(table)
+
 
