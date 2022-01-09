@@ -1,3 +1,5 @@
+import importlib
+
 import click 
 
 from rich.console import Console
@@ -11,19 +13,22 @@ def create_table() -> Table:
 
     return table    
 
-@click.command("--tool", default="vim")
-def main(tool):
+def print_devhint(table: Table, tool: str) -> None:
     console = Console()
 
-    create_table()
+    cheatsheet_module = importlib.import_module(f"devhints.devhints.{tool}")
 
-
-    from cheatsheets.vim import cheatsheets
-
-    for cheatsheet in cheatsheets:
+    for cheatsheet in cheatsheet_module.cheatsheets:
         table.add_row(cheatsheet[0], cheatsheet[1], cheatsheet[2])
-
     console.print(table)
+
+
+@click.command()
+@click.option("--tool")
+def main(tool):
+
+    table = create_table()
+    print_devhint(table, tool)
 
 
 if __name__ == "__main__":
