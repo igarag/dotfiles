@@ -1,4 +1,5 @@
 
+.env.sample
 **/__pycache__/*
 
 # VIM
