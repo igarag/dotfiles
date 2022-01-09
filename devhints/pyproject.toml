@@ -1,0 +1,28 @@
+# Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "devhints"
+version = "0.1.0"
+description = "Awesome `devhints` library for developers"
+readme = "README.md"
+authors = [
+  "NachoAz <nachoaz.dev@gmail.com>"
+]
+repository = "https://github.com/igarag/dotfiles/tree/master/devhints"
+homepage = "https://github.com/igarag/dotfiles/tree/master/devhints"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+environs = "^9.3.2"
+click = "^8.0.3"
+rich = "^10.16.2"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.7.0"
+pre-commit = "^2.9.3"
+black = "^21.5b1"
