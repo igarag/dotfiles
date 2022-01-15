@@ -55,7 +55,7 @@ File management and installation on the system has been done using [dotbot](http
 
 ## Application launcher
 
-### Rofi
+### :rocket: Rofi
 
 Rofi is a popular, easy and simple application launcher. Is a `dmenu` program. In a 'tiling window'  desktops environments is commonly executed by `Alt + D`.
 
@@ -103,7 +103,7 @@ rofi-theme-selector
 ```
 
 
-## Terminals
+## :desktop_computer: Terminals
 
 The terminals I normally use are:
 
@@ -136,13 +136,13 @@ Plugins:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
-### PopShell
+## PopShell
 
 <img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) is a great and powerful tool for Linux distributions with Gnome as desktop environment that automatically manages the windows of the operating system by placing them in a logical way. At the same time, it adjusts keyboard shortcuts using the Vim shortcut map.
 
 ![](./docs/tiling-example.png)
 
-### MailSpring
+### :email: MailSpring
 
 <img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client. I am using the "[predawn](https://github.com/adambmedia/N1-Predawn)" theme that the user "[asparc](https://github.com/asparc/predawn)" has modified.
 
@@ -165,7 +165,7 @@ To modify the theme you have to open the directory where it is installed.
 
 
 
-## Command line tools
+## :keyboard: Command line tools
 
 ### LazyGit
 
@@ -187,7 +187,7 @@ Installation:
     sudo pacman -S lazygit
     ```
 
-### Ranger
+### :star: Ranger
 
 <img align="left" width="90" height="80" src="./docs/ranger.png">[Ranger](https://github.com/ranger/ranger) is a powerful command-line file manager written in Python that allows you to move around very quickly using Vim's shortcuts.
 
@@ -205,7 +205,7 @@ Installing typing:
   sudo pacman -S ranger
   ```
 
-### BatCat
+### :bat: BatCat
 
 <img align="left" width="90" height="80" src="./docs/batcat.png">[BatCat](https://github.com/sharkdp/bat) is an extension for the *shell* that allows the contents of the formatted files to be viewed. It makes it easier to understand the code when we make a 'cat' on them. With the command `batcat <file>` we start it up. In the `.zshrc` file I have an alias to launch it with `cat`, keeping the original functionality of `cat` intact (to copy the content of a file the original `cat` is more useful since the lines of code don't appear).
 

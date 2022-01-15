@@ -131,7 +131,7 @@ Extensiones:
 
 ![](./docs/tiling-example.png)
 
-### MailSpring
+### :email: MailSpring
 
 <img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/mailspring-logo.jpg">MailsSpring es un poderoso cliente de correo de código libre. Uso el cliente con el tema "[predawn](https://github.com/adambmedia/N1-Predawn)", modificado por el usuario   "[asparc](https://github.com/asparc/predawn)".
 
@@ -150,7 +150,7 @@ Para modificar un tema, hay que abrir el directorio donde se instala el programa
 
 ![](/home/nachoaz/igarag/dotfiles/mailspring-theme-predaw/fig/predawn-screen-plain.png)
 
-## Herramientas por línea de comandos
+## :keyboard: Herramientas por línea de comandos
 
 ### LazyGit
 
@@ -257,7 +257,7 @@ Para instalar:
 pip3 install -U trash-cli
 ```
 
-## exa
+## :notebook: exa
 
 **exa** es un software para vitaminar el comando por terminal `ls`.
 
@@ -285,7 +285,19 @@ Instalación:
 
 ![](./docs/ctop-animation.gif)
 
-## Useful links
+## NeoVim
+Neovim is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
+
+### vim-plug
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## z
+
+From *[habd.as](https://habd.as/post/installing-using-rupaz-shell-script/)*: [rupa/z](https://github.com/rupa/z) is an amazing shell script that allows users to traverse a filesystem in no time flat. Use it if you spend any time at all changing directories in a *nix environment. It will improve productivity and spare fat fingers quite a bit of backpedaling.
 
 ### Gestor de ficheros de configuración
 
