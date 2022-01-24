@@ -37,13 +37,6 @@ This document shows the programs and configurations I have in the distributions 
 
 File management and installation on the system has been done using [dotbot](https://github.com/anishathalye/dotbot).
 
-### Tiling window manager resources
-
-- [pywal](https://github.com/dylanaraps/pywal/wiki/Installation)
-- bspwm
-- [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
-- Multimonitor: [mons](https://github.com/Ventto/mons)
-
 ## Fonts
 
 - [Caskadya](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip)
@@ -136,13 +129,46 @@ Plugins:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
-## PopShell
+## Desktop configuration
+
+### PopShell
 
 <img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) is a great and powerful tool for Linux distributions with Gnome as desktop environment that automatically manages the windows of the operating system by placing them in a logical way. At the same time, it adjusts keyboard shortcuts using the Vim shortcut map.
 
 ![](./docs/tiling-example.png)
 
-### :email: MailSpring
+### Tiling window manager resources
+
+- Qtile
+
+- Multimonitor: [mons](https://github.com/Ventto/mons)
+
+## Code editors
+
+- VSCode
+- Pycharm
+- NVim
+
+### NeoVim
+
+<img align="left" width="90" height="80" src="./docs/neovim-logo.png">**Neovim** is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
+
+
+#### vim-plug
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## Productivity
+
+- [MarkText](https://github.com/marktext/marktext)
+- [Focalboard](https://github.com/mattermost/focalboard)
+
+## :email: Mail
+
+### MailSpring
 
 <img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client. I am using the "[predawn](https://github.com/adambmedia/N1-Predawn)" theme that the user "[asparc](https://github.com/asparc/predawn)" has modified.
 
@@ -310,18 +336,6 @@ Installation:
 ![](./docs/ctop-animation.gif)
 
 
-
-### NeoVim
-
-<img align="left" width="90" height="80" src="./docs/neovim-logo.png">**Neovim** is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
-
-
-#### vim-plug
-
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
 
 ### z
 
