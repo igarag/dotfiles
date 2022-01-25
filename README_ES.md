@@ -4,27 +4,39 @@
   Mis archivos de configuración
   <br>
 </h1>
-
-[:es:](./README_ES.md) · [:gb:](./README.md)
+[:gb:](./README.md) · [:es:](./README_ES.md) 
 
 ## Contenido
 
-- [Lanzador de aplicaciones](#lanzador-de-aplicaciones)
-  - [Rofi](#rofi)
-- [Terminales](#terminales)
-- [Zsh](#zsh)
-- PopShell
-- MailSpring
-- [Herramientas por línea de comandos](#herramientas-por-linea-de-comandos)
-  - [LazyGit](#lazygit)
-  - [Ranger](#ranger)
-  - [BatCat](#batcat)
-  - [fzf](#fzf)
-  - [NMTUI](#nmtui)
-  - [NCDU](#ncdu)
-  - [Trash-CLI](#trash-cli)
-  - [exa](#exa)
-  - [ctop](#ctop)
+* [Contenido](#contenido)
+* [Fonts](#fonts)
+* [Lanzador de aplicaciones](#lanzador-de-aplicaciones)
+   * [Rofi](#rocket-rofi)
+* [Terminales](#desktop_computer-terminales)
+   * [Zsh](#zsh)
+* [Entorno de escritorio](#entorno-de-escritorio)
+   * [PopShell](#popshell)
+   * [Recursos para entornos de ventana en mosaico](#recursos-para-entornos-de-ventana-en-mosaico)
+* [Editores de código](#editores-de-código)
+* [NeoVim](#neovim)
+   * [vim-plug](#vim-plug)
+* [Productivity](#productivity)
+* [Mail](#email-mail)
+   * [MailSpring](#mailspring)
+* [Herramientas por línea de comandos](#keyboard-herramientas-por-línea-de-comandos)
+   * [LazyGit](#lazygit)
+* [Ranger](#star-ranger)
+* [BatCat](#bat-batcat)
+* [fzf](#mag_right-fzf)
+* [NMTUI](#signal_strength-nmtui)
+* [NCDU](#floppy_disk-ncdu)
+* [Trash-CLI](#recycle-trash-cli)
+* [exa](#notebook-exa)
+* [ctop](#ctop)
+* [z](#z)
+* [Useful GitHub repos](#useful-github-repos)
+* [Enlaces de utilidad](#enlaces-de-utilidad)
+* [Gestor de ficheros de configuración](#gestor-de-ficheros-de-configuración)
 
 ------
 
@@ -34,13 +46,6 @@ En este documento se muestran los programas y configuraciones que tengo en las d
 - Manjaro 20.2 - Kde/Qtile - Arch.
 
 La gestión de los archivos y la instalación en el sistema se ha realizado usando [dotbot](https://github.com/anishathalye/dotbot).
-
-### Recursos para tiling window manager
-
-- [pywal](https://github.com/dylanaraps/pywal/wiki/Installation)
-- bspwm
-- [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
-- Multimonitor: [mons](
 
 ## Fonts
 
@@ -125,13 +130,44 @@ Extensiones:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
-## PopShell
+## Entorno de escritorio
+
+### PopShell
 
 <img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) es una gran y potente herramienta para distribuciones Linux con Gnome como entorno de escritorio que gestiona automáticamente las ventanas del sistema operativo colocándolas de forma lógica. Al mismo tiempo, ajusta los atajos de teclado utilizando el mapa de atajos de Vim.
 
 ![](./docs/tiling-example.png)
 
-### :email: MailSpring
+### Recursos para entornos de ventana en mosaico
+
+- Qtile
+- Multimonitor: [mons](https://github.com/Ventto/mons)
+
+## Editores de código
+
+- VSCode
+- Pycharm
+- NVim
+
+## NeoVim
+
+<img align="left" width="90" height="80" src="./docs/neovim-logo.png">Neovim is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
+
+### vim-plug
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## Productivity
+
+- [MarkText](https://github.com/marktext/marktext)
+- [Focalboard](https://github.com/mattermost/focalboard)
+
+## :email: Mail
+
+### MailSpring
 
 <img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/mailspring-logo.jpg">MailsSpring es un poderoso cliente de correo de código libre. Uso el cliente con el tema "[predawn](https://github.com/adambmedia/N1-Predawn)", modificado por el usuario   "[asparc](https://github.com/asparc/predawn)".
 
@@ -285,21 +321,17 @@ Instalación:
 
 ![](./docs/ctop-animation.gif)
 
-## NeoVim
-Neovim is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
-
-### vim-plug
-
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
 ## z
 
 From *[habd.as](https://habd.as/post/installing-using-rupaz-shell-script/)*: [rupa/z](https://github.com/rupa/z) is an amazing shell script that allows users to traverse a filesystem in no time flat. Use it if you spend any time at all changing directories in a *nix environment. It will improve productivity and spare fat fingers quite a bit of backpedaling.
 
-### Gestor de ficheros de configuración
+## Useful GitHub repos
+
+- [github-markdown-toc](git@github.com:ekalinin/github-markdown-toc.git)
+
+## Enlaces de utilidad
+
+## Gestor de ficheros de configuración
 
 - [Blog de Dotbot](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
 
