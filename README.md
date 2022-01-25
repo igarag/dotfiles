@@ -9,24 +9,36 @@
 
 ## Content
 
-- Fonts
+- [Content](#content)
 
-- [Application launcher](#application-launcher)
-  - [Rofi](#rofi)
-- [Terminals](#terminals)
-- [Zsh](#zsh)
-- [PopShell](https://github.com/pop-os/shell)
-- [MailSpring](#mailspring)
-- [Command-line tools](#commandline-tools)
-  - [LazyGit](#lazygit)
-  - [Ranger](#ranger)
-  - [BatCat](#batcat)
-  - [fzf](#fzf)
-  - [NMTUI](#nmtui)
-  - [NCDU](#ncdu)
-  - [Trash-CLI](#trash-cli)
-  - [exa](#exa)
-  - [ctop](#ctop)
+* [Fonts](#fonts)
+* [Application launcher](#application-launcher)
+   * [Rofi](#rocket-rofi)
+* [Terminals](#desktop_computer-terminals)
+   * [Zsh](#zsh)
+* [Desktop configuration](#desktop-configuration)
+   * [PopShell](#popshell)
+   * [Tiling window manager resources](#tiling-window-manager-resources)
+* [Code editors](#code-editors)
+   * [NeoVim](#neovim)
+      * [vim-plug](#vim-plug)
+* [Productivity](#productivity)
+* [Mail](#email-mail)
+   * [MailSpring](#mailspring)
+* [Command line tools](#keyboard-command-line-tools)
+   * [LazyGit](#lazygit)
+   * [Ranger](#star-ranger)
+   * [BatCat](#bat-batcat)
+   * [fzf](#mag_right-fzf)
+   * [NMTUI](#signal_strength-nmtui)
+   * [NCDU](#floppy_disk-ncdu)
+   * [Trash-CLI](#recycle-trash-cli)
+   * [exa](#notebook-exa)
+   * [ctop](#ctop)
+   * [z](#z)
+* [Useful GitHub repos](#useful-github-repos)
+* [Useful links](#useful-links)
+   * [Dotfiles manager](#dotfiles-manager)
 
 ---------------------
 
@@ -335,11 +347,13 @@ Installation:
 
 ![](./docs/ctop-animation.gif)
 
-
-
 ### z
 
 From *[habd.as](https://habd.as/post/installing-using-rupaz-shell-script/)*: [rupa/z](https://github.com/rupa/z) is an amazing shell script that allows users to traverse a filesystem in no time flat. Use it if you spend any time at all changing directories in a *nix environment. It will improve productivity and spare fat fingers quite a bit of backpedaling.
+
+## Useful GitHub repos
+
+- [github-markdown-toc](git@github.com:ekalinin/github-markdown-toc.git)
 
 ## Useful links
 
