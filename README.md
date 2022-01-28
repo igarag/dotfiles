@@ -178,9 +178,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 - [MarkText](https://github.com/marktext/marktext)
 - [Focalboard](https://github.com/mattermost/focalboard)
 
-## :email: Mail
-
-### MailSpring
+### :email: MailSpring
 
 <img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client. I am using the "[predawn](https://github.com/adambmedia/N1-Predawn)" theme that the user "[asparc](https://github.com/asparc/predawn)" has modified.
 
