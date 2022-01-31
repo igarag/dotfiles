@@ -23,7 +23,6 @@ def print_devhint(table: Table, tool: str) -> None:
     console.print(table)
 
 
-@click.argument("tool")
 @click.command()
 @click.option("--tool", type=str)
 def main(tool):
