@@ -27,6 +27,9 @@ alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}
 alias dim='docker images'
 alias dex='docker exec -it'
 alias dc='docker-compose'
+alias dl='docker logs'
+alias dlf='docker logs -f'
+alias dstop='docker stop'
 
 # Shortcuts
 alias ipconfig='ip -c --brief addr show'
