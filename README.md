@@ -177,6 +177,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 - [MarkText](https://github.com/marktext/marktext)
 - [Focalboard](https://github.com/mattermost/focalboard)
+- [Boostnote](https://boostnote.io/)
+- [Dendron (a VSCode extension)](https://www.dendron.so/)
 
 ### :email: MailSpring
 
