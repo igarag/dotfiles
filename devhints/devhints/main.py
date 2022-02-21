@@ -1,9 +1,10 @@
 import importlib
 
-import click 
+import click
 
 from rich.console import Console
-from rich.table import Column, Table
+from rich.table import Table
+
 
 def create_table() -> Table:
     table = Table(show_header=True, header_style="bold ")
@@ -11,7 +12,7 @@ def create_table() -> Table:
     table.add_column("Description", justify="left")
     table.add_column("Example", justify="left")
 
-    return table    
+    return table
 
 def print_devhint(table: Table, tool: str) -> None:
     console = Console()
@@ -33,3 +34,4 @@ def main(tool):
 
 if __name__ == "__main__":
     main()
+
