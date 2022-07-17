@@ -1,0 +1,77 @@
+#!/bin/bash
+
+#    ___   ___                    
+#   / _ | / (_)__ ____ ________   
+#  / __ |/ / / _ `(_-</ __/ __/   
+# /_/ |_/_/_/\_,_/___/_/  \__/    
+# -----------------------------                               
+
+# Configuration files
+alias vreload='source ~/.zshrc'
+alias vz='nvim ~/.zshrc'
+alias vb='nvim ~/.bashrc'
+
+# Programs and shortcuts
+alias r='ranger'
+alias n='nautilus .'
+alias code='codium'
+alias ty='typora'
+alias tyr='typora README.md'
+alias vim='nvim'
+
+# UNIX
+alias grep="grep --color=auto"
+
+# Docker
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}"'
+alias dim='docker images'
+alias dex='docker exec -it'
+alias dc='docker-compose'
+alias dstop='docker stop'
+alias dl='docker logs'
+alias dlf='docker logs -f'
+
+# Shortcuts
+alias ipconfig='ip -c --brief addr show'
+alias untar='tar -xvf'
+# Forecast: (just today) --> | tail -n 50 | head -n 17 | tail -n 10'
+alias forecast='curl -X GET wttr.in 2>/dev/null'
+alias whereisthepi='nmap -sn 192.168.1.1-254'
+
+# Git
+alias g='lazygit'
+alias gg='lazygit'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gco='git checkout'
+
+# Python
+alias python='python3'
+alias pip='pip3'
+alias dj='python manage.py'
+alias djr='python manage.py runserver'
+alias djmm='python manage.py makemigrations'
+alias djm='python manage.py migrate'
+alias test='python manage.py test -s --logging-clear-handlers --noinput'
+alias jn='jupyter-notebook'
+alias jl='jupyter lab'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+## MODERN UNIX
+
+# Navigation
+alias l='exa -l'
+alias ll='exa -la'
+alias la='ls -A'
+
+# Files
+alias ccat='batcat'
+
+# Tools
+alias du='dust'
+

@@ -4,25 +4,39 @@
   Mis archivos de configuración
   <br>
 </h1>
-
-[:es:](./README_ES.md) · [:gb:](./README.md)
+[:gb:](./README.md) · [:es:](./README_ES.md) 
 
 ## Contenido
 
-- [Lanzador de aplicaciones](#lanzador-de-aplicaciones)
-  - [Rofi](#rofi)
-- [Terminales](#terminales)
-- [Zsh](#zsh)
-- [Herramientas por línea de comandos](#herramientas-por-linea-de-comandos)
-  - [LazyGit](#lazygit)
-  - [Ranger](#ranger)
-  - [BatCat](#batcat)
-  - [fzf](#fzf)
-  - [NMTUI](#nmtui)
-  - [NCDU](#ncdu)
-  - [Trash-CLI](#trash-cli)
-  - [LS Deluxe](#lsdeluxe)
-  - [ctop](#ctop)
+* [Contenido](#contenido)
+* [Fonts](#fonts)
+* [Lanzador de aplicaciones](#lanzador-de-aplicaciones)
+   * [Rofi](#rocket-rofi)
+* [Terminales](#desktop_computer-terminales)
+   * [Zsh](#zsh)
+* [Entorno de escritorio](#entorno-de-escritorio)
+   * [PopShell](#popshell)
+   * [Recursos para entornos de ventana en mosaico](#recursos-para-entornos-de-ventana-en-mosaico)
+* [Editores de código](#editores-de-código)
+* [NeoVim](#neovim)
+   * [vim-plug](#vim-plug)
+* [Productivity](#productivity)
+* [Mail](#email-mail)
+   * [MailSpring](#mailspring)
+* [Herramientas por línea de comandos](#keyboard-herramientas-por-línea-de-comandos)
+   * [LazyGit](#lazygit)
+* [Ranger](#star-ranger)
+* [BatCat](#bat-batcat)
+* [fzf](#mag_right-fzf)
+* [NMTUI](#signal_strength-nmtui)
+* [NCDU](#floppy_disk-ncdu)
+* [Trash-CLI](#recycle-trash-cli)
+* [exa](#notebook-exa)
+* [ctop](#ctop)
+* [z](#z)
+* [Useful GitHub repos](#useful-github-repos)
+* [Enlaces de utilidad](#enlaces-de-utilidad)
+* [Gestor de ficheros de configuración](#gestor-de-ficheros-de-configuración)
 
 ------
 
@@ -31,12 +45,16 @@ En este documento se muestran los programas y configuraciones que tengo en las d
 - Pop! OS 20.04 - Gnome - Ubuntu based / Debian.
 - Manjaro 20.2 - Kde/Qtile - Arch.
 
-### Recursos para tiling window manager
+La gestión de los archivos y la instalación en el sistema se ha realizado usando [dotbot](https://github.com/anishathalye/dotbot).
 
-- [pywal](https://github.com/dylanaraps/pywal/wiki/Installation)
-- bspwm
-- [i3-gaps](https://github.com/pasiegel/i3-gaps-install-ubuntu) - [i3-gaps-ref-2](https://github.com/Airblader/i3)
-- Multimonitor: [mons](
+## Fonts
+
+- [Caskadya](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip)
+- [FiraCode](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip)
+- [Hurmit](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hermit.zip)
+- [BlexMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/IBMPlexMono.zip)
+
+*Pueden probarse las fuentes de manera online en [programmingfonts.org](https://www.programmingfonts.org/#cascadia-code).*
 
 ## Lanzador de aplicaciones
 
@@ -112,13 +130,63 @@ Extensiones:
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
 
-## PopShell
+## Entorno de escritorio
+
+### PopShell
 
 <img align="left" width="90" height="80" src="./docs/tiling-window.png">[PopShell ](https://github.com/pop-os/shell) es una gran y potente herramienta para distribuciones Linux con Gnome como entorno de escritorio que gestiona automáticamente las ventanas del sistema operativo colocándolas de forma lógica. Al mismo tiempo, ajusta los atajos de teclado utilizando el mapa de atajos de Vim.
 
 ![](./docs/tiling-example.png)
 
-## Herramientas por línea de comandos
+### Recursos para entornos de ventana en mosaico
+
+- Qtile
+- Multimonitor: [mons](https://github.com/Ventto/mons)
+
+## Editores de código
+
+- VSCode
+- Pycharm
+- NVim
+
+## NeoVim
+
+<img align="left" width="90" height="80" src="./docs/neovim-logo.png">Neovim is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
+
+### vim-plug
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## Productivity
+
+- [MarkText](https://github.com/marktext/marktext)
+- [Focalboard](https://github.com/mattermost/focalboard)
+
+## :email: Mail
+
+### MailSpring
+
+<img align="left" width="90" height="80" src="/home/nachoaz/igarag/dotfiles/docs/mailspring-logo.jpg">MailsSpring es un poderoso cliente de correo de código libre. Uso el cliente con el tema "[predawn](https://github.com/adambmedia/N1-Predawn)", modificado por el usuario   "[asparc](https://github.com/asparc/predawn)".
+
+
+
+Para modificar un tema, hay que abrir el directorio donde se instala el programa:
+
+- En **Ubuntu**: `~/snap/mailspring/common/packages/predawn`
+- Habilitar el modo desarrollador (opción Developer -> Lanzar el programa con las opciones de depuración).
+- Recargar el tema con cada cambio, escribiendo:
+
+    ```react
+    AppEnv.themes.setActiveTheme('ui-light'); // default theme (for example).
+    AppEnv.themes.setActiveTheme('predawn');  // Custom theme.
+    ```
+
+![](/home/nachoaz/igarag/dotfiles/mailspring-theme-predaw/fig/predawn-screen-plain.png)
+
+## :keyboard: Herramientas por línea de comandos
 
 ### LazyGit
 
@@ -225,26 +293,26 @@ Para instalar:
 pip3 install -U trash-cli
 ```
 
-## LSD (LSDeluxe)
+## :notebook: exa
 
-LSD es un software para vitaminar el comando por terminal `ls`.
+**exa** es un software para vitaminar el comando por terminal `ls`.
 
-![](./docs/lsd.png)
+![](./docs/exa.png)
 
-Basándose en `colorls` y escrito en el lenguaje Rust, `lsd` añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar haciendo uso de un fichero de configuración `config.yaml` alojado en la carpeta personal del usuario: `~/.config/lsd/config.yaml`. Este directorio se crea automáticamente cuando se instala el programa.
+Basándose en `colorls` y en `lsd` (LSDeluxe) y escrito en el lenguaje Rust, exa añade un elemento más de configuración: permite configurar los elementos que se quieren mostrar. Se hacen uso de los `alias` para lanzar diferentes configuraciones.
 
 Instalación:
 
 - Debian, descargando el binario de la [sección de "releases"](https://github.com/Peltoche/lsd/releases) y haciendo uso de `dpkg`:
 
   ```bash
-  sudo dpkg -i lsd_0.19.0_amd64.deb # adapt version number and architecture
+  sudo apt install exa
   ```
 
 - Arch:
 
   ```bash
-  sudo pacman -S lsd
+  sudo pacman -S exa
   ```
 
 ## ctop
@@ -252,3 +320,35 @@ Instalación:
 <img align="left" width="100" height="40" src="./docs/ctop-icon.png">[Ctop](https://github.com/bcicen/ctop) es un gestor de contenedores por línea de comandos que permite ver el estado de los contenedores Docker así como el consumo de CPU y memoria con autorefresco. Ideal para cuando se tienen varios servicios a la vez y se quiere vigilar el rendimiento. En la animación que tienen en su repositorio puede verse un ejemplo:
 
 ![](./docs/ctop-animation.gif)
+
+## z
+
+From *[habd.as](https://habd.as/post/installing-using-rupaz-shell-script/)*: [rupa/z](https://github.com/rupa/z) is an amazing shell script that allows users to traverse a filesystem in no time flat. Use it if you spend any time at all changing directories in a *nix environment. It will improve productivity and spare fat fingers quite a bit of backpedaling.
+
+
+
+### :musical_note: ncstop
+
+Cliente ligero de Spotify para línea de comandos.
+
+[Link](https://github.com/hrkfdn/ncspot)
+
+## Useful GitHub repos
+
+- [github-markdown-toc](git@github.com:ekalinin/github-markdown-toc.git)
+
+## Enlaces de utilidad
+
+## Gestor de ficheros de configuración
+
+- [Blog de Dotbot](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
+
+- [Plantilla de ficheros de configuración](https://github.com/anishathalye/dotfiles_template)
+
+- [Ejemplo de uso de Dotfiles](https://github.com/anishathalye/dotfiles/blob/63131479f69634843989ac1e07e9ee94b9f21935/.install.conf.yaml#L24-L26)
+- [Más ejemplos de configuracíon](https://github.com/jesseleite/dotfiles/blob/master/install.conf.yaml)
+
+- [Repositorio con scripts para instalar paquetes en el sistema](https://github.com/jsonMartin/dotfiles)
+
+- [Dotfiles tutorial en videov](https://www.youtube.com/watch?v=E25gI87Ce1A)
+- [Otro blog de Dotfiles](https://www.notion.so/ARCHIVED-How-to-easily-back-up-and-restore-your-Linux-configuration-software-using-GIT-and-dot-0cee0a7e2bbc49ec8a425f42525fdb3f)
