@@ -10,35 +10,50 @@
 ## Content
 
 - [Content](#content)
-
 * [Fonts](#fonts)
+
 * [Application launcher](#application-launcher)
-   * [Rofi](#rocket-rofi)
+  
+  * [Rofi](#rocket-rofi)
+
 * [Terminals](#desktop_computer-terminals)
-   * [Zsh](#zsh)
+  
+  * [Zsh](#zsh)
+
 * [Desktop configuration](#desktop-configuration)
-   * [PopShell](#popshell)
-   * [Tiling window manager resources](#tiling-window-manager-resources)
+  
+  * [PopShell](#popshell)
+  * [Tiling window manager resources](#tiling-window-manager-resources)
+
 * [Code editors](#code-editors)
-   * [NeoVim](#neovim)
-      * [vim-plug](#vim-plug)
+  
+  * [NeoVim](#neovim)
+    * [vim-plug](#vim-plug)
+
 * [Productivity](#productivity)
+
 * [Mail](#email-mail)
-   * [MailSpring](#mailspring)
+  
+  * [MailSpring](#mailspring)
+
 * [Command line tools](#keyboard-command-line-tools)
-   * [LazyGit](#lazygit)
-   * [Ranger](#star-ranger)
-   * [BatCat](#bat-batcat)
-   * [fzf](#mag_right-fzf)
-   * [NMTUI](#signal_strength-nmtui)
-   * [NCDU](#floppy_disk-ncdu)
-   * [Trash-CLI](#recycle-trash-cli)
-   * [exa](#notebook-exa)
-   * [ctop](#ctop)
-   * [z](#z)
+  
+  * [LazyGit](#lazygit)
+  * [Ranger](#star-ranger)
+  * [BatCat](#bat-batcat)
+  * [fzf](#mag_right-fzf)
+  * [NMTUI](#signal_strength-nmtui)
+  * [NCDU](#floppy_disk-ncdu)
+  * [Trash-CLI](#recycle-trash-cli)
+  * [exa](#notebook-exa)
+  * [ctop](#ctop)
+  * [z](#z)
+
 * [Useful GitHub repos](#useful-github-repos)
+
 * [Useful links](#useful-links)
-   * [Dotfiles manager](#dotfiles-manager)
+  
+  * [Dotfiles manager](#dotfiles-manager)
 
 ---------------------
 
@@ -69,28 +84,27 @@ Rofi is a popular, easy and simple application launcher. Is a `dmenu` program. I
 Rofi installation:
 
 - Debian:
-
+  
   ```bash
   sudo apt install rofi
   ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S rofi
   ```
 
-
 Add the following command to your custom shortcuts in order to executed like the above animation (launcher + icons).
 
 - Run programs:
-
+  
   ```bash
   rofi -show drun -show-icons
   ```
 
 - Show windows
-
+  
   ```bash
   rofi -show window -show-icons
   ```
@@ -106,7 +120,6 @@ And set the theme typing:
 ```bash
 rofi-theme-selector
 ```
-
 
 ## :desktop_computer: Terminals
 
@@ -135,7 +148,7 @@ Plugins:
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
-
+  
   ```bash
   git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -165,7 +178,6 @@ Plugins:
 
 <img align="left" width="90" height="80" src="./docs/neovim-logo.png">**Neovim** is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
 
-
 #### vim-plug
 
 ```bash
@@ -179,12 +191,17 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 - [Focalboard](https://github.com/mattermost/focalboard)
 - [Boostnote](https://boostnote.io/)
 - [Dendron (a VSCode extension)](https://www.dendron.so/)
+- [Paper (Flatpak app)]([Flathub—An app store and build service for Linux](https://flathub.org/apps/details/io.posidon.Paper))
+
+## Web Browser addons
+
+- I don't care about cookies [[chrome engine]([I don&#39;t care about cookies - Chrome Web Store](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja/related?hl=es))] [[firefox](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/)]
+
+- Vimium [[chrome engine](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=es)] ][firefox](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)]
 
 ### :email: MailSpring
 
 <img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client. I am using the "[predawn](https://github.com/adambmedia/N1-Predawn)" theme that the user "[asparc](https://github.com/asparc/predawn)" has modified.
-
-
 
 To modify the theme you have to open the directory where it is installed.
 
@@ -193,15 +210,13 @@ To modify the theme you have to open the directory where it is installed.
 - Enable the developer flags (Developer --> Run with debug flags)
 
 - Reload the theme at each change by typing:
-
+  
   ```react
   AppEnv.themes.setActiveTheme('ui-light'); // default theme (for example).
   AppEnv.themes.setActiveTheme('predawn');  // Custom theme.
   ```
 
 ![](./mailspring-theme-predaw/fig/predawn-screen-plain.png)
-
-
 
 ## :keyboard: Command line tools
 
@@ -214,16 +229,16 @@ To modify the theme you have to open the directory where it is installed.
 Installation:
 
 - Debian
+  
+  ```bash
+  sudo apt install lazygit
+  ```
 
-    ```bash
-    sudo apt install lazygit
-    ```
-    
 - Arch:
-
-    ```bash
-    sudo pacman -S lazygit
-    ```
+  
+  ```bash
+  sudo pacman -S lazygit
+  ```
 
 ### :star: Ranger
 
@@ -232,13 +247,13 @@ Installation:
 Installing typing:
 
 - Debian:
-
+  
   ```bash
   sudo apt install ranger
   ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S ranger
   ```
@@ -264,13 +279,13 @@ In the following image you can see a simple example of a file in Python:
 Install:
 
 - Debian:
-
+  
   ```bash
   sudo apt install fzf
   ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S fzf
   ```
@@ -293,7 +308,7 @@ Command line disk analyzer in the style of the GUI version of Baobab.
 Install:
 
 - Debian:
-
+  
   ```
   sudo apt install ncdu
   ```
@@ -327,17 +342,16 @@ Based on `colorls` and `lsd` (LSDeluxe) and written in the Rust language, exa ad
 Installation:
 
 - Debian, by downloading the binary from the [releases](https://github.com/Peltoche/lsd/releases) section and using `dpkg`:
-
-    ```bash
-    sudo apt install exa
-    ```
+  
+  ```bash
+  sudo apt install exa
+  ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S exa
   ```
-
 
 ### ctop
 
@@ -370,9 +384,11 @@ Lightweight Spotify client for command line.
 - [Dotfiles template](https://github.com/anishathalye/dotfiles_template)
 
 - [Dotfiles sample using dotbot](https://github.com/anishathalye/dotfiles/blob/63131479f69634843989ac1e07e9ee94b9f21935/.install.conf.yaml#L24-L26)
+
 - [More dotfiles sample](https://github.com/jesseleite/dotfiles/blob/master/install.conf.yaml)
 
 - [Dotfiles repository with package installation](https://github.com/jsonMartin/dotfiles)
 
 - [Dotfiles video tutorial](https://www.youtube.com/watch?v=E25gI87Ce1A)
+
 - [Dotfiles blog](https://www.notion.so/ARCHIVED-How-to-easily-back-up-and-restore-your-Linux-configuration-software-using-GIT-and-dot-0cee0a7e2bbc49ec8a425f42525fdb3f)
