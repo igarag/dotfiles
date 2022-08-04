@@ -69,28 +69,27 @@ Rofi is a popular, easy and simple application launcher. Is a `dmenu` program. I
 Rofi installation:
 
 - Debian:
-
+  
   ```bash
   sudo apt install rofi
   ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S rofi
   ```
 
-
 Add the following command to your custom shortcuts in order to executed like the above animation (launcher + icons).
 
 - Run programs:
-
+  
   ```bash
   rofi -show drun -show-icons
   ```
 
 - Show windows
-
+  
   ```bash
   rofi -show window -show-icons
   ```
@@ -106,7 +105,6 @@ And set the theme typing:
 ```bash
 rofi-theme-selector
 ```
-
 
 ## :desktop_computer: Terminals
 
@@ -140,7 +138,7 @@ Plugins (inside of `/.oh-my-zsh/plugins/`:
   ```
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
-
+  
   ```bash
   git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -187,9 +185,44 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ### :email: MailSpring
 
+- Qtile
+
+- Multimonitor: [mons](https://github.com/Ventto/mons)
+
+## Code editors
+
+- VSCode
+- Pycharm
+- NVim
+
+### NeoVim
+
+<img align="left" width="90" height="80" src="./docs/neovim-logo.png">**Neovim** is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
+
+#### vim-plug
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## Productivity
+
+- [MarkText](https://github.com/marktext/marktext)
+- [Focalboard](https://github.com/mattermost/focalboard)
+- [Boostnote](https://boostnote.io/)
+- [Dendron (a VSCode extension)](https://www.dendron.so/)
+- [Paper (Flatpak app)]([Flathub—An app store and build service for Linux](https://flathub.org/apps/details/io.posidon.Paper))
+
+## Web Browser addons
+
+- I don't care about cookies [[chrome engine]([I don&#39;t care about cookies - Chrome Web Store](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja/related?hl=es))] [[firefox](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/)]
+
+- Vimium [[chrome engine](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=es)] ][firefox](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)]
+
+### :email: MailSpring
+
 <img align="left" width="90" height="80" src="./docs/mailspring-logo.jpg">MailSpring is an Open Source and powerful mail client. I am using the "[predawn](https://github.com/adambmedia/N1-Predawn)" theme that the user "[asparc](https://github.com/asparc/predawn)" has modified.
-
-
 
 To modify the theme you have to open the directory where it is installed.
 
@@ -198,7 +231,7 @@ To modify the theme you have to open the directory where it is installed.
 - Enable the developer flags (Developer --> Run with debug flags)
 
 - Reload the theme at each change by typing:
-
+  
   ```react
   AppEnv.themes.setActiveTheme('ui-light'); // default theme (for example).
   AppEnv.themes.setActiveTheme('predawn');  // Custom theme.
@@ -219,16 +252,16 @@ To modify the theme you have to open the directory where it is installed.
 Installation:
 
 - Debian
+  
+  ```bash
+  sudo apt install lazygit
+  ```
 
-    ```bash
-    sudo apt install lazygit
-    ```
-    
 - Arch:
-
-    ```bash
-    sudo pacman -S lazygit
-    ```
+  
+  ```bash
+  sudo pacman -S lazygit
+  ```
 
 ### :star: Ranger
 
@@ -237,13 +270,13 @@ Installation:
 Installing typing:
 
 - Debian:
-
+  
   ```bash
   sudo apt install ranger
   ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S ranger
   ```
@@ -269,13 +302,13 @@ In the following image you can see a simple example of a file in Python:
 Install:
 
 - Debian:
-
+  
   ```bash
   sudo apt install fzf
   ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S fzf
   ```
@@ -298,7 +331,7 @@ Command line disk analyzer in the style of the GUI version of Baobab.
 Install:
 
 - Debian:
-
+  
   ```
   sudo apt install ncdu
   ```
@@ -338,11 +371,10 @@ Installation:
     ```
 
 - Arch:
-
+  
   ```bash
   sudo pacman -S exa
   ```
-
 
 ### ctop
 
