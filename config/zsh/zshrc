@@ -114,6 +114,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 ###
 source ~/.aliasrc
 
+# Docker
+export DOCKER_BUILDKIT=1
+
 # FZF enable
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -141,8 +144,6 @@ source /usr/local/bin/z.sh
 
 # ROS + Gazebo
 source /opt/ros/noetic/setup.zsh
-
-##### 
 export GAZEBO_MODEL_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/models
 export GAZEBO_RESOURCE_PATH=$HOME/igarag/jderobot/gym-gazebo-2/rl_studio/CustomRobots/f1/worlds
-source $HOME/igarag/jderobot/gym-gazebo-2/rl_studio/installation/catkin_ws/devel/setup.zsh
+
