@@ -30,6 +30,7 @@ alias dc='docker-compose'
 alias dstop='docker stop'
 alias dl='docker logs'
 alias dlf='docker logs -f'
+alias dclean='docker rmi -f $(docker images --filter "dangling=true" -q --no-trunc)'
 
 # Shortcuts
 alias ipconfig='ip -c --brief addr show'
