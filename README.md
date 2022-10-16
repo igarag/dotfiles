@@ -55,6 +55,7 @@ File management and installation on the system has been done using [dotbot](http
 - [FiraCode](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip)
 - [Hurmit](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hermit.zip)
 - [BlexMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/IBMPlexMono.zip)
+- [Monocraft](https://github.com/IdreesInc/Monocraft)
 
 *You can test all the fonts in [programmingfonts.org](https://www.programmingfonts.org/#cascadia-code).*
 
