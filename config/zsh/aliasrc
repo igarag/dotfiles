@@ -58,6 +58,9 @@ alias test='python manage.py test -s --logging-clear-handlers --noinput'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
+# Poetry
+alias pr='poetry run'
+
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
