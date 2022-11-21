@@ -15,8 +15,8 @@ alias vb='nvim ~/.bashrc'
 alias r='ranger'
 alias n='nautilus .'
 alias code='codium'
-alias ty='typora'
-alias tyr='typora README.md'
+alias md='marktext'
+alias mdd='marktext README.md'
 alias vim='nvim'
 
 # UNIX
@@ -69,9 +69,9 @@ alias ....='cd ../../..'
 ## MODERN UNIX
 
 # Navigation
-alias l='exa -l'
-alias ll='exa -la'
-alias la='ls -A'
+alias l='lsd -l'
+alias ll='lsd -la'
+alias la='lsd -A'
 
 # Files
 alias ccat='batcat'

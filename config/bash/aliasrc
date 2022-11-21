@@ -15,8 +15,8 @@ alias vb='nvim ~/.bashrc'
 alias r='ranger'
 alias n='nautilus .'
 alias code='codium'
-alias ty='typora'
-alias tyr='typora README.md'
+alias md='marktext'
+alias mdd='marktext README.md'
 alias vim='nvim'
 
 # UNIX
