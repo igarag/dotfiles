@@ -10,35 +10,50 @@
 ## Content
 
 - [Content](#content)
-
 * [Fonts](#fonts)
+
 * [Application launcher](#application-launcher)
-   * [Rofi](#rocket-rofi)
+  
+  * [Rofi](#rocket-rofi)
+
 * [Terminals](#desktop_computer-terminals)
-   * [Zsh](#zsh)
+  
+  * [Zsh](#zsh)
+
 * [Desktop configuration](#desktop-configuration)
-   * [PopShell](#popshell)
-   * [Tiling window manager resources](#tiling-window-manager-resources)
+  
+  * [PopShell](#popshell)
+  * [Tiling window manager resources](#tiling-window-manager-resources)
+
 * [Code editors](#code-editors)
-   * [NeoVim](#neovim)
-      * [vim-plug](#vim-plug)
+  
+  * [NeoVim](#neovim)
+    * [vim-plug](#vim-plug)
+
 * [Productivity](#productivity)
+
 * [Mail](#email-mail)
-   * [MailSpring](#mailspring)
+  
+  * [MailSpring](#mailspring)
+
 * [Command line tools](#keyboard-command-line-tools)
-   * [LazyGit](#lazygit)
-   * [Ranger](#star-ranger)
-   * [BatCat](#bat-batcat)
-   * [fzf](#mag_right-fzf)
-   * [NMTUI](#signal_strength-nmtui)
-   * [NCDU](#floppy_disk-ncdu)
-   * [Trash-CLI](#recycle-trash-cli)
-   * [exa](#notebook-exa)
-   * [ctop](#ctop)
-   * [z](#z)
+  
+  * [LazyGit](#lazygit)
+  * [Ranger](#star-ranger)
+  * [BatCat](#bat-batcat)
+  * [fzf](#mag_right-fzf)
+  * [NMTUI](#signal_strength-nmtui)
+  * [NCDU](#floppy_disk-ncdu)
+  * [Trash-CLI](#recycle-trash-cli)
+  * [exa](#notebook-exa)
+  * [ctop](#ctop)
+  * [z](#z)
+
 * [Useful GitHub repos](#useful-github-repos)
+
 * [Useful links](#useful-links)
-   * [Dotfiles manager](#dotfiles-manager)
+  
+  * [Dotfiles manager](#dotfiles-manager)
 
 ---------------------
 
@@ -148,6 +163,20 @@ Plugins:
 
 ![](./docs/tiling-example.png)
 
+Import/Export PopOS / Ubuntu configuration:
+
+- Export:
+
+```bash
+dconf dump / > popos_debian.conf
+```
+
+- Import:
+
+```bash
+dconf load -f /org/gnome/shell/extensions/pop-shell/ < backuppp
+```
+
 ### Tiling window manager resources
 
 - Qtile
@@ -163,7 +192,6 @@ Plugins:
 ### NeoVim
 
 <img align="left" width="90" height="80" src="./docs/neovim-logo.png">**Neovim** is a fork – with additions – of Vim that strives to improve the extensibility and maintainability of Vim. Neovim has the same configuration syntax as Vim; thus the same configuration file can be used with both editors, although there are minor differences in details of options. If the added features of Neovim are not used, Neovim is compatible with almost all of Vim's features.
-
 
 #### vim-plug
 
@@ -234,8 +262,6 @@ To modify the theme you have to open the directory where it is installed.
   ```
 
 ![](./mailspring-theme-predaw/fig/predawn-screen-plain.png)
-
-
 
 ## :keyboard: Command line tools
 
@@ -361,10 +387,10 @@ Based on `colorls` and `lsd` (LSDeluxe) and written in the Rust language, exa ad
 Installation:
 
 - Debian, by downloading the binary from the [releases](https://github.com/Peltoche/lsd/releases) section and using `dpkg`:
-
-    ```bash
-    sudo apt install exa
-    ```
+  
+  ```bash
+  sudo apt install exa
+  ```
 
 - Arch:
   
@@ -403,9 +429,11 @@ Lightweight Spotify client for command line.
 - [Dotfiles template](https://github.com/anishathalye/dotfiles_template)
 
 - [Dotfiles sample using dotbot](https://github.com/anishathalye/dotfiles/blob/63131479f69634843989ac1e07e9ee94b9f21935/.install.conf.yaml#L24-L26)
+
 - [More dotfiles sample](https://github.com/jesseleite/dotfiles/blob/master/install.conf.yaml)
 
 - [Dotfiles repository with package installation](https://github.com/jsonMartin/dotfiles)
 
 - [Dotfiles video tutorial](https://www.youtube.com/watch?v=E25gI87Ce1A)
+
 - [Dotfiles blog](https://www.notion.so/ARCHIVED-How-to-easily-back-up-and-restore-your-Linux-configuration-software-using-GIT-and-dot-0cee0a7e2bbc49ec8a425f42525fdb3f)
