@@ -14,23 +14,26 @@ alias vb='nvim ~/.bashrc'
 # Programs and shortcuts
 alias r='ranger'
 alias n='nautilus .'
-alias code='codium'
+alias code='code'
 alias md='marktext'
 alias mdd='marktext README.md'
 alias vim='nvim'
+alias vvim='neovide'
 
 # UNIX
 alias grep="grep --color=auto"
 
 # Docker
+alias d='lazydocker'
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}"'
 alias dim='docker images'
 alias dex='docker exec -it'
-alias dc='docker-compose'
+alias dc='docker compose'
 alias dstop='docker stop'
 alias dl='docker logs'
 alias dlf='docker logs -f'
 alias dclean='docker rmi -f $(docker images --filter "dangling=true" -q --no-trunc)'
+alias ddv='docker volume rm $(docker volume ls -qf dangling=true)'
 
 # Shortcuts
 alias ipconfig='ip -c --brief addr show'
@@ -78,4 +81,4 @@ alias ccat='batcat'
 
 # Tools
 alias du='dust'
-
+alias cal='rusti-cal 2023  --starting-day 1 --color --week-numbers'
