@@ -147,7 +147,7 @@ My favorite shell is zsh. It's very easy to configure and you can add extensions
 Plugins (inside of `/.oh-my-zsh/plugins/`:
 
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
-
+  
   ```bash
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
   echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
@@ -159,6 +159,8 @@ Plugins (inside of `/.oh-my-zsh/plugins/`:
   git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   ```
+
+Under testing. Replace powelevel10 by ["oh-my-posh"](https://ohmyposh.dev/docs/installation/linux)
 
 ## Desktop configuration
 
@@ -188,6 +190,20 @@ dconf load -f /org/gnome/shell/extensions/pop-shell/ < backuppp
 
 - Multimonitor: [mons](https://github.com/Ventto/mons)
 
+### SaveDektop (Gnome only)
+
+Save and apply your Desktop Environment configuration using this [tool](https://github.com/vikdevelop/SaveDesktop?ref=its-foss-news). The repository is hosted by flatpak in [this link](https://beta.flathub.org/apps/io.github.vikdevelop.SaveDesktop).
+
+```bash
+flatpak install flathub io.github.vikdevelop.SaveDesktop
+```
+
+Run the program:
+
+```bash
+flatpak run io.github.vikdevelop.SaveDesktop
+```
+
 ## Code editors
 
 - VSCode
@@ -211,6 +227,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 - [Focalboard](https://github.com/mattermost/focalboard)
 - [Boostnote](https://boostnote.io/)
 - [Dendron (a VSCode extension)](https://www.dendron.so/)
+- [Homepage](https://github.com/benphelps/homepage)
+- [Dashy](https://github.com/Lissy93/dashy)
 
 ### :email: MailSpring
 
@@ -415,6 +433,12 @@ Installation:
 
 From *[habd.as](https://habd.as/post/installing-using-rupaz-shell-script/)*: [rupa/z](https://github.com/rupa/z) is an amazing shell script that allows users to traverse a filesystem in no time flat. Use it if you spend any time at all changing directories in a *nix environment. It will improve productivity and spare fat fingers quite a bit of backpedaling.
 
+An alternative written in Rust there are another tool for it: [zoxide](https://github.com/ajeetdsouza/zoxide).
+
+### cheat
+
+Interactive cheatsheets on the command-line. [Link](https://github.com/cheat/cheat).
+
 ### :musical_note: ncstop
 
 Lightweight Spotify client for command line.
@@ -426,6 +450,11 @@ Lightweight Spotify client for command line.
 - [github-markdown-toc](git@github.com:ekalinin/github-markdown-toc.git)
 
 ## Useful links
+
+## Command-line applications
+
+- [spotifyd](https://github.com/Spotifyd/spotifyd)
+- [stpofity-tui](https://github.com/Rigellute/spotify-tui)
 
 ### Dotfiles manager
 
