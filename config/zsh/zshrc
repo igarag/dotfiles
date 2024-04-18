@@ -4,11 +4,6 @@
 # (_)___/____/_/ /_/_/   \___/
 # ------------------------------
 
-### TheFuck
-# eval $(thefuck --alias)
-# You can use whatever you want as an alias, like for Mondays:
-# eval $(thefuck --alias FUCK)
-
 # Node + Poetry
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -53,13 +48,11 @@ source $ZSH/oh-my-zsh.sh
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 export PATH="$HOME.local/bin:$PATH"
-export PATH="/usr/local/Slicer-5.0.3-linux-amd64:$PATH"
 export DOCKER_BUILDKIT=1
-export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=15
 export LANG=en_US.UTF-8
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [[ -f ~/.envrc ]] && . ~/.envrc
 [[ -f ~/.aliasrc ]] && . ~/.aliasrc
@@ -70,3 +63,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # else
 #   export EDITOR='mvim'
 # fi
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.fzf/shell/completion.zsh
+source ~/.fzf/shell/key-bindings.zsh
