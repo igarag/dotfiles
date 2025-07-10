@@ -12,17 +12,29 @@ alias vz='nvim ~/.zshrc'
 alias vb='nvim ~/.bashrc'
 
 # Programs and shortcuts
-alias r='ranger'
+# File manager
+# Alternative: ranger
+alias f='yazi'
 alias n='nautilus .'
+
+# Code
 alias code='code'
-alias ty='typora'
-alias md='marktext'
-alias mdd='marktext README.md'
 alias vim='nvim'
 alias vvim='neovide'
 
+# MarkDown
+# alternative: 'marktext'
+alias md='typora'
+alias mdd='typora README.md'
+
 # UNIX
 alias grep="grep --color=auto"
+
+# Linux
+# -----
+
+# Ubuntu
+alias aptupdate="sudo apt update && sudo apt upgrade -y"
 
 # Docker
 alias d='lazydocker'
@@ -54,11 +66,10 @@ alias gco='git checkout'
 # Python
 alias python='python3'
 alias pip='pip3'
-alias dj='python manage.py'
-alias djr='python manage.py runserver'
-alias djmm='python manage.py makemigrations'
-alias djm='python manage.py migrate'
-alias test='python manage.py test -s --logging-clear-handlers --noinput'
+# alias dj='python manage.py runserver'
+# alias djmm='python manage.py makemigrations'
+# alias djm='python manage.py migrate'
+# alias test='python manage.py test -s --logging-clear-handlers --noinput'
 alias jn='jupyter-notebook'
 alias jl='jupyter lab'
 
@@ -83,3 +94,8 @@ alias ccat='batcat'
 # Tools
 alias du='dust'
 alias cal='rusti-cal 2024  --starting-day 1 --color --week-numbers'
+alias systemctl-tui='systemctl-tui'
+
+# OS
+# Restart touchpad (because of bug)
+alias toucpadr='sudo modprobe -r psmouse && sudo modprobe psmouse'
