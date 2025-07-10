@@ -15,6 +15,7 @@ alias vb='nvim ~/.bashrc'
 alias r='ranger'
 alias n='nautilus .'
 alias code='code'
+alias ty='typora'
 alias md='marktext'
 alias mdd='marktext README.md'
 alias vim='nvim'
@@ -81,4 +82,4 @@ alias ccat='batcat'
 
 # Tools
 alias du='dust'
-alias cal='rusti-cal 2023  --starting-day 1 --color --week-numbers'
+alias cal='rusti-cal 2024  --starting-day 1 --color --week-numbers'
